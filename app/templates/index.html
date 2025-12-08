@@ -1,0 +1,137 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prometheus - Serial Cables Hardware Dashboard</title>
+
+    <!-- Gridstack CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/gridstack@10.0.0/dist/gridstack.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/gridstack@10.0.0/dist/gridstack-extra.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/static/css/dashboard.css" rel="stylesheet">
+
+    <!-- Socket.IO -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+
+    <!-- Gridstack JS -->
+    <script src="https://cdn.jsdelivr.net/npm/gridstack@10.0.0/dist/gridstack-all.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <h1>Prometheus</h1>
+            <span class="subtitle">Serial Cables Hardware Dashboard</span>
+        </div>
+        <div class="header-right">
+            <div class="connection-status" id="connectionStatus">
+                <span class="status-indicator disconnected"></span>
+                <span class="status-text">Disconnected</span>
+            </div>
+            <button class="btn btn-primary" onclick="dashboard.showAddWidgetModal()">+ Add Widget</button>
+            <button class="btn btn-secondary" onclick="dashboard.saveLayout()">Save Layout</button>
+            <button class="btn btn-secondary" onclick="dashboard.exportAllSysinfo()">Export All Sysinfo</button>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Grid -->
+    <main class="dashboard-container">
+        <div class="grid-stack" id="grid"></div>
+    </main>
+
+    <!-- Add Widget Modal -->
+    <div class="modal" id="addWidgetModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add Widget</h2>
+                <button class="modal-close" onclick="dashboard.closeModal('addWidgetModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="widget-selector">
+                    <h3>Connection</h3>
+                    <button class="widget-option" onclick="dashboard.addWidget('connection')">
+                        <span class="widget-icon">🔌</span>
+                        <span class="widget-name">Connection Manager</span>
+                    </button>
+
+                    <h3>Device Information</h3>
+                    <button class="widget-option" onclick="dashboard.addWidget('sysinfo')">
+                        <span class="widget-icon">ℹ️</span>
+                        <span class="widget-name">System Info</span>
+                    </button>
+                    <button class="widget-option" onclick="dashboard.addWidget('status')">
+                        <span class="widget-icon">📊</span>
+                        <span class="widget-name">Device Status</span>
+                    </button>
+
+                    <h3>Monitoring</h3>
+                    <button class="widget-option" onclick="dashboard.addWidget('temperatures')">
+                        <span class="widget-icon">🌡️</span>
+                        <span class="widget-name">Temperature Monitor</span>
+                    </button>
+                    <button class="widget-option" onclick="dashboard.addWidget('ports')">
+                        <span class="widget-icon">🔗</span>
+                        <span class="widget-name">Port Status</span>
+                    </button>
+                    <button class="widget-option" onclick="dashboard.addWidget('errors')">
+                        <span class="widget-icon">⚠️</span>
+                        <span class="widget-name">Error Counters (Atlas3)</span>
+                    </button>
+
+                    <h3>Tools</h3>
+                    <button class="widget-option" onclick="dashboard.addWidget('console')">
+                        <span class="widget-icon">💻</span>
+                        <span class="widget-name">Command Console</span>
+                    </button>
+                    <button class="widget-option" onclick="dashboard.addWidget('register')">
+                        <span class="widget-icon">📝</span>
+                        <span class="widget-name">Register Explorer</span>
+                    </button>
+
+                    <h3>Control</h3>
+                    <button class="widget-option" onclick="dashboard.addWidget('control')">
+                        <span class="widget-icon">🎛️</span>
+                        <span class="widget-name">Control Panel</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Device Selection Modal -->
+    <div class="modal" id="deviceSelectModal">
+        <div class="modal-content modal-small">
+            <div class="modal-header">
+                <h2>Select Device</h2>
+                <button class="modal-close" onclick="dashboard.closeModal('deviceSelectModal')">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="deviceSelectList" class="device-select-list">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Widget Templates -->
+    {% include 'widgets/connection.html' %}
+    {% include 'widgets/sysinfo.html' %}
+    {% include 'widgets/status.html' %}
+    {% include 'widgets/temperatures.html' %}
+    {% include 'widgets/ports.html' %}
+    {% include 'widgets/console.html' %}
+    {% include 'widgets/register.html' %}
+    {% include 'widgets/control.html' %}
+    {% include 'widgets/errors.html' %}
+
+    <!-- Device Registry and Handlers -->
+    <script src="/static/js/devices/device-registry.js"></script>
+    <script src="/static/js/devices/atlas3.js"></script>
+    <script src="/static/js/devices/hydra.js"></script>
+
+    <!-- Dashboard JavaScript -->
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>

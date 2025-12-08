@@ -1,0 +1,106 @@
+{
+  "version": "1.0",
+  "description": "Prometheus device signature definitions for auto-detection",
+  "devices": [
+    {
+      "device_type": "atlas3",
+      "display_name": "Atlas3 PCIe Switch",
+      "manufacturer": "Serial Cables",
+      "description": "Atlas3 PCIe Gen5/Gen6 Switch cards",
+      "usb_ids": {
+        "vid": "045B",
+        "pid": "5300"
+      },
+      "patterns": {
+        "model": [
+          "PCI6-AD-X16HI-BG6-144",
+          "PCI6-AD-X16HI-BG6-80",
+          "PCI6-AD-X16HI",
+          "PCI6-AD",
+          "Atlas3"
+        ],
+        "identifier": [
+          "PCI6-AD-X16HI-BG6",
+          "Serial\\s*Cables.*Atlas",
+          "Atlas3?\\s+PCIe",
+          "ATL3-"
+        ]
+      },
+      "response_format": {
+        "model_regex": "Model\\s*:\\s*([^║\\r\\n]+?)\\s*(?:║|\\r|\\n|$)",
+        "serial_regex": "Serial No\\.?\\s*:\\s*([A-Z0-9\\-]+)",
+        "firmware_regex": "Version\\s*:\\s*v?([0-9]+\\.[0-9]+\\.?[0-9]*)",
+        "company_regex": "Company\\s*:\\s*([^║\\r\\n]+?)\\s*(?:║|\\r|\\n|$)"
+      },
+      "known_models": [
+        "PCI6-AD-X16HI-BG6-144",
+        "PCI6-AD-X16HI-BG6-80",
+        "PCI6-AD-x16HI-BG6-144",
+        "PCI6-AD-x16HI-BG6-80"
+      ],
+      "priority": 10
+    },
+    {
+      "device_type": "hydra",
+      "display_name": "HYDRA JBOF Controller",
+      "manufacturer": "Serial Cables",
+      "description": "HYDRA JBOF (Just a Bunch of Flash) controllers",
+      "usb_ids": {
+        "vid": "0000",
+        "pid": "0002"
+      },
+      "patterns": {
+        "model": [
+          "PCI6-ENC8-E3-08",
+          "PCI6-ENC8-E1",
+          "PCI6-ENC8",
+          "PCIe Gen6 8bays JBOF",
+          "PCIe Gen6 8Bays JBOF",
+          "HYDRA"
+        ],
+        "identifier": [
+          "PCI6-ENC8",
+          "PCIe\\s*Gen6\\s*8\\s*[Bb]ays\\s*JBOF",
+          "Serial\\s*Cables.*HYDRA",
+          "HYDRA.*JBOF",
+          "HYD-"
+        ]
+      },
+      "response_format": {
+        "model_regex": "Model\\s*:\\s*([^║\\r\\n]+?)\\s*(?:║|\\r|\\n|$)",
+        "serial_regex": "Serial No\\.?\\s*:\\s*([A-Z0-9\\-]+)",
+        "firmware_regex": "Version\\s*:\\s*v?([0-9]+\\.[0-9]+\\.?[0-9]*)",
+        "company_regex": "Company\\s*:\\s*([^║\\r\\n]+?)\\s*(?:║|\\r|\\n|$)"
+      },
+      "known_models": [
+        "PCI6-ENC8-E3-08",
+        "PCIe Gen6 8bays JBOF",
+        "PCIe Gen6 8Bays JBOF"
+      ],
+      "priority": 10
+    }
+  ],
+  "detection_settings": {
+    "baudrate": 115200,
+    "timeout": 2.0,
+    "command": "ver\r\n",
+    "retry_count": 2,
+    "inter_command_delay": 0.1,
+    "min_confidence": 0.3
+  },
+  "notes": {
+    "adding_new_device": [
+      "1. Add a new entry to the 'devices' array",
+      "2. Set device_type to match the handler name (e.g., 'atlas3', 'hydra')",
+      "3. Add actual part numbers to 'model' patterns array",
+      "4. Add regex patterns for 'identifier' matching",
+      "5. Define response_format regexes to extract model, serial, firmware",
+      "6. Create a corresponding handler in app/api/handlers/",
+      "7. Create frontend handler in app/static/js/devices/"
+    ],
+    "model_examples": {
+      "atlas3": ["PCI6-AD-X16HI-BG6-144", "PCI6-AD-X16HI-BG6-80"],
+      "hydra": ["PCI6-ENC8-E3-08", "PCIe Gen6 8bays JBOF"]
+    }
+  }
+}

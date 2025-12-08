@@ -1,0 +1,439 @@
+<template id="widget-control">
+    <div class="widget-content">
+        <div class="widget-header">
+            <h3>Control Panel</h3>
+            <div class="widget-actions">
+                <button class="btn-icon btn-remove" onclick="dashboard.removeWidget(this)" title="Remove">✕</button>
+            </div>
+        </div>
+        <div class="widget-body">
+            <div class="control-device-select">
+                <label>Device</label>
+                <select class="widget-device-select" onchange="dashboard.onControlDeviceChange(this)">
+                    <option value="">Select device...</option>
+                </select>
+            </div>
+            <div class="control-panels-container">
+                <div class="placeholder-message">Select a device to view controls</div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- Atlas3 Control Panel -->
+<template id="control-panel-atlas3">
+    <div class="control-panel atlas3-controls">
+        <!-- Config Save/Load -->
+        <div class="control-section config-section">
+            <div class="control-section-header">
+                <span>Configuration</span>
+                <div class="config-actions">
+                    <input type="text" class="config-name-input" placeholder="Config name...">
+                    <button class="btn btn-sm" onclick="dashboard.saveControlConfig(this)">Save</button>
+                    <select class="config-load-select">
+                        <option value="">Load config...</option>
+                    </select>
+                    <button class="btn btn-sm" onclick="dashboard.loadControlConfig(this)">Load</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PERST# -->
+        <div class="control-section">
+            <div class="control-section-header">
+                <span>PERST#</span>
+            </div>
+            <div class="control-section-body">
+                <div class="control-group-label">Send PERST# to MCIO Connector</div>
+                <div class="control-btn-group">
+                    <button class="control-btn"
+                            onclick="dashboard.executeAtlas3Command(this, 'conrst', {connector: 0})"
+                            title="Send PERST# with 300ms duration to MCIO Connector 0">
+                        MCIO 0
+                    </button>
+                    <button class="control-btn"
+                            onclick="dashboard.executeAtlas3Command(this, 'conrst', {connector: 1})"
+                            title="Send PERST# with 300ms duration to MCIO Connector 1">
+                        MCIO 1
+                    </button>
+                    <button class="control-btn"
+                            onclick="dashboard.executeAtlas3Command(this, 'conrst', {connector: 2})"
+                            title="Send PERST# with 300ms duration to MCIO Connector 2">
+                        MCIO 2
+                    </button>
+                    <button class="control-btn"
+                            onclick="dashboard.executeAtlas3Command(this, 'conrst', {connector: 3})"
+                            title="Send PERST# with 300ms duration to MCIO Connector 3">
+                        MCIO 3
+                    </button>
+                    <button class="control-btn btn-warning"
+                            onclick="dashboard.executeAtlas3Command(this, 'conrst', {connector: 'all'})"
+                            title="Send PERST# with 300ms duration to ALL MCIO Connectors">
+                        ALL
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mode Settings -->
+        <div class="control-section">
+            <div class="control-section-header">
+                <span>Operation Mode</span>
+                <span class="current-value mode-current">--</span>
+            </div>
+            <div class="control-section-body">
+                <div class="control-group-label">Select PCIe 6.x Link Mode</div>
+                <div class="control-btn-group">
+                    <button class="control-btn btn-wide mode-btn" data-mode="1"
+                            onclick="dashboard.executeAtlas3ModeChange(this, 1)"
+                            title="Host to switch golden finger port in Common Clock, Precoding Enable. &#10;&#10;PCIe 6.x Precoding: A signal conditioning technique that pre-distorts transmitted data to compensate for channel loss, improving signal integrity at 64 GT/s speeds.">
+                        Mode 1
+                    </button>
+                    <button class="control-btn btn-wide mode-btn" data-mode="2"
+                            onclick="dashboard.executeAtlas3ModeChange(this, 2)"
+                            title="Host to switch golden finger port in Common Clock, Precoding Disable.">
+                        Mode 2
+                    </button>
+                    <button class="control-btn btn-wide mode-btn" data-mode="3"
+                            onclick="dashboard.executeAtlas3ModeChange(this, 3)"
+                            title="Host to switch golden finger port in SRNS (Separate Reference clocks with No Spread), Precoding Enable. &#10;&#10;PCIe 6.x Precoding: A signal conditioning technique that pre-distorts transmitted data to compensate for channel loss, improving signal integrity at 64 GT/s speeds.">
+                        Mode 3
+                    </button>
+                    <button class="control-btn btn-wide mode-btn" data-mode="4"
+                            onclick="dashboard.executeAtlas3ModeChange(this, 4)"
+                            title="Host to switch golden finger port in SRNS (Separate Reference clocks with No Spread), Precoding Disable.">
+                        Mode 4
+                    </button>
+                </div>
+                <div class="control-warning">
+                    Changing mode requires a power cycle of the Atlas3 device. The device will be disconnected.
+                </div>
+            </div>
+        </div>
+
+        <!-- Clock Options -->
+        <div class="control-section">
+            <div class="control-section-header">
+                <span>Clock</span>
+                <span class="current-value clock-current">--</span>
+            </div>
+            <div class="control-section-body">
+                <!-- Clock Toggle -->
+                <div class="control-toggle-row">
+                    <span class="control-group-label">Reference Clock Output</span>
+                    <label class="toggle-switch"
+                           title="Toggle the PCIe reference clock on all downstream ports"
+                           onclick="dashboard.executeAtlas3ClockToggle(this)">
+                        <input type="checkbox" class="clock-toggle-input" checked>
+                        <span class="toggle-slider"></span>
+                        <span class="toggle-label clock-toggle-label">Enabled</span>
+                    </label>
+                </div>
+
+                <!-- Spread Spectrum Buttons -->
+                <div class="control-group-label" style="margin-top: 12px;">Spread Spectrum</div>
+                <div class="control-btn-group">
+                    <button class="control-btn btn-wide spread-btn" data-spread="off"
+                            onclick="dashboard.executeAtlas3Command(this, 'spread', {mode: 'off'})"
+                            title="Disable Spread Spectrum Clocking (SSC). Use Center Frequency Clocking (CFC) - no frequency modulation applied to the reference clock.">
+                        Off
+                    </button>
+                    <button class="control-btn btn-wide spread-btn" data-spread="1"
+                            onclick="dashboard.executeAtlas3Command(this, 'spread', {mode: '1'})"
+                            title="Enable Down-spreading 2500 PPM (-0.25%). The reference clock frequency is modulated downward by 0.25% to reduce EMI emissions.">
+                        -0.25%
+                    </button>
+                    <button class="control-btn btn-wide spread-btn" data-spread="2"
+                            onclick="dashboard.executeAtlas3Command(this, 'spread', {mode: '2'})"
+                            title="Enable Down-spreading 5000 PPM (-0.5%). The reference clock frequency is modulated downward by 0.5% for maximum EMI reduction.">
+                        -0.5%
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FLIT Mode -->
+        <div class="control-section">
+            <div class="control-section-header">
+                <span>FLIT Mode</span>
+                <span class="current-value flit-current">--</span>
+            </div>
+            <div class="control-section-body">
+                <div class="control-row">
+                    <label>Station</label>
+                    <select class="control-input" data-command="flit" data-param="station">
+                        <option value="2">Station 2 (Upstream)</option>
+                        <option value="5">Station 5 (Straddle)</option>
+                        <option value="7">Station 7 (EXT MCIO)</option>
+                        <option value="8">Station 8 (INT MCIO)</option>
+                    </select>
+                </div>
+                <div class="control-row">
+                    <label>FLIT</label>
+                    <select class="control-input" data-command="flit" data-param="disable">
+                        <option value="false">Enabled</option>
+                        <option value="true">Disabled</option>
+                    </select>
+                </div>
+                <div class="control-actions" style="margin-top: 8px; border-top: none; padding-top: 0;">
+                    <button class="btn btn-primary btn-sm" onclick="dashboard.runControlCommands(this)">Apply FLIT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- Hydra Control Panel -->
+<template id="control-panel-hydra">
+    <div class="control-panel hydra-controls">
+        <!-- Config Save/Load -->
+        <div class="control-section config-section">
+            <div class="control-section-header">
+                <span>Configuration</span>
+                <div class="config-actions">
+                    <input type="text" class="config-name-input" placeholder="Config name...">
+                    <button class="btn btn-sm" onclick="dashboard.saveControlConfig(this)">Save</button>
+                    <select class="config-load-select">
+                        <option value="">Load config...</option>
+                    </select>
+                    <button class="btn btn-sm" onclick="dashboard.loadControlConfig(this)">Load</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Power -->
+        <div class="control-section">
+            <div class="control-section-header">
+                <span>System Power</span>
+            </div>
+            <div class="control-section-body">
+                <div class="control-btn-group">
+                    <button class="control-btn btn-wide btn-success"
+                            onclick="dashboard.executeHydraCommand(this, 'syspwr', {state: 'on'})"
+                            title="Power on the Hydra JBOF system">
+                        Power On
+                    </button>
+                    <button class="control-btn btn-wide btn-danger"
+                            onclick="dashboard.executeHydraCommand(this, 'syspwr', {state: 'off'})"
+                            title="Shutdown the Hydra JBOF system. Device will be disconnected.">
+                        Shutdown
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- SSD Power -->
+        <div class="control-section">
+            <div class="control-section-header">
+                <span>SSD Power</span>
+            </div>
+            <div class="control-section-body">
+                <div class="control-group-label">Power On Slot</div>
+                <div class="slot-btn-grid">
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdpwr', {slot: '1', state: 'on'})" title="Power on SSD in Slot 1">1</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdpwr', {slot: '2', state: 'on'})" title="Power on SSD in Slot 2">2</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdpwr', {slot: '3', state: 'on'})" title="Power on SSD in Slot 3">3</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdpwr', {slot: '4', state: 'on'})" title="Power on SSD in Slot 4">4</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdpwr', {slot: '5', state: 'on'})" title="Power on SSD in Slot 5">5</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdpwr', {slot: '6', state: 'on'})" title="Power on SSD in Slot 6">6</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdpwr', {slot: '7', state: 'on'})" title="Power on SSD in Slot 7">7</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdpwr', {slot: '8', state: 'on'})" title="Power on SSD in Slot 8">8</button>
+                </div>
+                <div class="control-btn-group" style="margin-top: 8px;">
+                    <button class="control-btn btn-wide btn-success" onclick="dashboard.executeHydraCommand(this, 'ssdpwr', {slot: 'all', state: 'on'})" title="Power on all SSD slots">All On</button>
+                    <button class="control-btn btn-wide btn-danger" onclick="dashboard.executeHydraCommand(this, 'ssdpwr', {slot: 'all', state: 'off'})" title="Power off all SSD slots">All Off</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resets -->
+        <div class="control-section">
+            <div class="control-section-header">
+                <span>Resets</span>
+            </div>
+            <div class="control-section-body">
+                <div class="control-group-label">SSD Reset (PERST#)</div>
+                <div class="slot-btn-grid">
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdrst', {slot: '1'})" title="Send reset to SSD in Slot 1">1</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdrst', {slot: '2'})" title="Send reset to SSD in Slot 2">2</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdrst', {slot: '3'})" title="Send reset to SSD in Slot 3">3</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdrst', {slot: '4'})" title="Send reset to SSD in Slot 4">4</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdrst', {slot: '5'})" title="Send reset to SSD in Slot 5">5</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdrst', {slot: '6'})" title="Send reset to SSD in Slot 6">6</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdrst', {slot: '7'})" title="Send reset to SSD in Slot 7">7</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'ssdrst', {slot: '8'})" title="Send reset to SSD in Slot 8">8</button>
+                </div>
+                <button class="control-btn btn-warning" style="margin-top: 8px; width: 100%;" onclick="dashboard.executeHydraCommand(this, 'ssdrst', {slot: 'all'})" title="Send reset to all SSD slots">Reset All SSDs</button>
+
+                <div class="control-group-label" style="margin-top: 16px;">SMBus Reset</div>
+                <div class="slot-btn-grid">
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'smbrst', {slot: '1'})" title="Reset SMBus for Slot 1">1</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'smbrst', {slot: '2'})" title="Reset SMBus for Slot 2">2</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'smbrst', {slot: '3'})" title="Reset SMBus for Slot 3">3</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'smbrst', {slot: '4'})" title="Reset SMBus for Slot 4">4</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'smbrst', {slot: '5'})" title="Reset SMBus for Slot 5">5</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'smbrst', {slot: '6'})" title="Reset SMBus for Slot 6">6</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'smbrst', {slot: '7'})" title="Reset SMBus for Slot 7">7</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'smbrst', {slot: '8'})" title="Reset SMBus for Slot 8">8</button>
+                </div>
+                <button class="control-btn btn-warning" style="margin-top: 8px; width: 100%;" onclick="dashboard.executeHydraCommand(this, 'smbrst', {slot: 'all'})" title="Reset SMBus for all slots">Reset All SMBus</button>
+            </div>
+        </div>
+
+        <!-- LEDs -->
+        <div class="control-section">
+            <div class="control-section-header">
+                <span>LEDs</span>
+            </div>
+            <div class="control-section-body">
+                <div class="control-group-label">Host LED - Turn On</div>
+                <div class="slot-btn-grid">
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'hled', {slot: '1', state: 'on'})" title="Turn on Host LED for Slot 1">1</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'hled', {slot: '2', state: 'on'})" title="Turn on Host LED for Slot 2">2</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'hled', {slot: '3', state: 'on'})" title="Turn on Host LED for Slot 3">3</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'hled', {slot: '4', state: 'on'})" title="Turn on Host LED for Slot 4">4</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'hled', {slot: '5', state: 'on'})" title="Turn on Host LED for Slot 5">5</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'hled', {slot: '6', state: 'on'})" title="Turn on Host LED for Slot 6">6</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'hled', {slot: '7', state: 'on'})" title="Turn on Host LED for Slot 7">7</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'hled', {slot: '8', state: 'on'})" title="Turn on Host LED for Slot 8">8</button>
+                </div>
+                <div class="control-btn-group" style="margin-top: 8px;">
+                    <button class="control-btn btn-wide" onclick="dashboard.executeHydraCommand(this, 'hled', {slot: 'all', state: 'on'})" title="Turn on all Host LEDs">All On</button>
+                    <button class="control-btn btn-wide" onclick="dashboard.executeHydraCommand(this, 'hled', {slot: 'all', state: 'off'})" title="Turn off all Host LEDs">All Off</button>
+                </div>
+
+                <div class="control-group-label" style="margin-top: 16px;">Fault LED - Turn On</div>
+                <div class="slot-btn-grid">
+                    <button class="control-btn btn-sm btn-warning" onclick="dashboard.executeHydraCommand(this, 'fled', {slot: '1', state: 'on'})" title="Turn on Fault LED for Slot 1">1</button>
+                    <button class="control-btn btn-sm btn-warning" onclick="dashboard.executeHydraCommand(this, 'fled', {slot: '2', state: 'on'})" title="Turn on Fault LED for Slot 2">2</button>
+                    <button class="control-btn btn-sm btn-warning" onclick="dashboard.executeHydraCommand(this, 'fled', {slot: '3', state: 'on'})" title="Turn on Fault LED for Slot 3">3</button>
+                    <button class="control-btn btn-sm btn-warning" onclick="dashboard.executeHydraCommand(this, 'fled', {slot: '4', state: 'on'})" title="Turn on Fault LED for Slot 4">4</button>
+                    <button class="control-btn btn-sm btn-warning" onclick="dashboard.executeHydraCommand(this, 'fled', {slot: '5', state: 'on'})" title="Turn on Fault LED for Slot 5">5</button>
+                    <button class="control-btn btn-sm btn-warning" onclick="dashboard.executeHydraCommand(this, 'fled', {slot: '6', state: 'on'})" title="Turn on Fault LED for Slot 6">6</button>
+                    <button class="control-btn btn-sm btn-warning" onclick="dashboard.executeHydraCommand(this, 'fled', {slot: '7', state: 'on'})" title="Turn on Fault LED for Slot 7">7</button>
+                    <button class="control-btn btn-sm btn-warning" onclick="dashboard.executeHydraCommand(this, 'fled', {slot: '8', state: 'on'})" title="Turn on Fault LED for Slot 8">8</button>
+                </div>
+                <div class="control-btn-group" style="margin-top: 8px;">
+                    <button class="control-btn btn-wide btn-warning" onclick="dashboard.executeHydraCommand(this, 'fled', {slot: 'all', state: 'on'})" title="Turn on all Fault LEDs">All On</button>
+                    <button class="control-btn btn-wide" onclick="dashboard.executeHydraCommand(this, 'fled', {slot: 'all', state: 'off'})" title="Turn off all Fault LEDs">All Off</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buzzer -->
+        <div class="control-section">
+            <div class="control-section-header">
+                <span>Buzzer</span>
+            </div>
+            <div class="control-section-body">
+                <!-- Buzzer Enable/Disable Toggle - MUST be enabled first -->
+                <div class="control-toggle-row">
+                    <span class="control-group-label">Buzzer Enabled</span>
+                    <div class="rocker-switch" title="Enable or disable buzzer functionality. Must be enabled for buzzer to sound.">
+                        <button class="rocker-btn rocker-left"
+                                onclick="dashboard.executeHydraCommand(this, 'buz', {state: 'disable'})"
+                                title="Disable buzzer - the buzzer will not sound">
+                            Off
+                        </button>
+                        <button class="rocker-btn rocker-right"
+                                onclick="dashboard.executeHydraCommand(this, 'buz', {state: 'enable'})"
+                                title="Enable buzzer - allows the buzzer to sound">
+                            On
+                        </button>
+                    </div>
+                </div>
+                <!-- Buzzer Sound Toggle -->
+                <div class="control-toggle-row">
+                    <span class="control-group-label">Buzzer Sound</span>
+                    <div class="rocker-switch" title="Trigger buzzer sound (buzzer must be enabled first)">
+                        <button class="rocker-btn rocker-left active"
+                                onclick="dashboard.executeHydraCommand(this, 'buz', {state: 'off'})"
+                                title="Stop buzzer sound">
+                            Stop
+                        </button>
+                        <button class="rocker-btn rocker-right"
+                                onclick="dashboard.executeHydraBuzzerOn(this)"
+                                title="Sound the buzzer (will auto-enable if disabled)">
+                            Beep
+                        </button>
+                    </div>
+                </div>
+                <div class="control-note" style="margin-top: 8px;">
+                    Buzzer must be enabled before it can sound.
+                </div>
+            </div>
+        </div>
+
+        <!-- Fan Control -->
+        <div class="control-section">
+            <div class="control-section-header">
+                <span>Fan Control</span>
+            </div>
+            <div class="control-section-body">
+                <div class="control-row">
+                    <label>Fan ID</label>
+                    <select class="control-input" data-command="pwmctrl" data-param="fan_id">
+                        <option value="">Select fan...</option>
+                        <option value="1">Fan 1</option>
+                        <option value="2">Fan 2</option>
+                    </select>
+                </div>
+                <div class="control-row">
+                    <label>Duty Cycle (%)</label>
+                    <input type="number" class="control-input" data-command="pwmctrl" data-param="duty" min="0" max="100" value="50">
+                </div>
+                <div class="control-actions" style="margin-top: 8px; border-top: none; padding-top: 0;">
+                    <button class="btn btn-primary btn-sm" onclick="dashboard.runControlCommands(this)">Apply Fan Setting</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dual Port -->
+        <div class="control-section">
+            <div class="control-section-header">
+                <span>Dual Port Mode</span>
+            </div>
+            <div class="control-section-body">
+                <div class="control-group-label">Enable Dual Port</div>
+                <div class="slot-btn-grid">
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'dual', {slot: '1', enabled: true})" title="Enable dual port mode for Slot 1">1</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'dual', {slot: '2', enabled: true})" title="Enable dual port mode for Slot 2">2</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'dual', {slot: '3', enabled: true})" title="Enable dual port mode for Slot 3">3</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'dual', {slot: '4', enabled: true})" title="Enable dual port mode for Slot 4">4</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'dual', {slot: '5', enabled: true})" title="Enable dual port mode for Slot 5">5</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'dual', {slot: '6', enabled: true})" title="Enable dual port mode for Slot 6">6</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'dual', {slot: '7', enabled: true})" title="Enable dual port mode for Slot 7">7</button>
+                    <button class="control-btn btn-sm" onclick="dashboard.executeHydraCommand(this, 'dual', {slot: '8', enabled: true})" title="Enable dual port mode for Slot 8">8</button>
+                </div>
+                <div class="control-btn-group" style="margin-top: 8px;">
+                    <button class="control-btn btn-wide btn-success" onclick="dashboard.executeHydraCommand(this, 'dual', {slot: 'all', enabled: true})" title="Enable dual port mode for all slots">Enable All</button>
+                    <button class="control-btn btn-wide btn-danger" onclick="dashboard.executeHydraCommand(this, 'dual', {slot: 'all', enabled: false})" title="Disable dual port mode for all slots">Disable All</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- PWRDIS# -->
+        <div class="control-section">
+            <div class="control-section-header">
+                <span>PWRDIS# Control</span>
+            </div>
+            <div class="control-section-body">
+                <div class="control-group-label">Set PWRDIS# High (Disable Power)</div>
+                <div class="slot-btn-grid">
+                    <button class="control-btn btn-sm btn-danger" onclick="dashboard.executeHydraCommand(this, 'pwrdis', {slot: '1', level: 'high'})" title="Set PWRDIS# high for Slot 1 (disable power)">1</button>
+                    <button class="control-btn btn-sm btn-danger" onclick="dashboard.executeHydraCommand(this, 'pwrdis', {slot: '2', level: 'high'})" title="Set PWRDIS# high for Slot 2 (disable power)">2</button>
+                    <button class="control-btn btn-sm btn-danger" onclick="dashboard.executeHydraCommand(this, 'pwrdis', {slot: '3', level: 'high'})" title="Set PWRDIS# high for Slot 3 (disable power)">3</button>
+                    <button class="control-btn btn-sm btn-danger" onclick="dashboard.executeHydraCommand(this, 'pwrdis', {slot: '4', level: 'high'})" title="Set PWRDIS# high for Slot 4 (disable power)">4</button>
+                    <button class="control-btn btn-sm btn-danger" onclick="dashboard.executeHydraCommand(this, 'pwrdis', {slot: '5', level: 'high'})" title="Set PWRDIS# high for Slot 5 (disable power)">5</button>
+                    <button class="control-btn btn-sm btn-danger" onclick="dashboard.executeHydraCommand(this, 'pwrdis', {slot: '6', level: 'high'})" title="Set PWRDIS# high for Slot 6 (disable power)">6</button>
+                    <button class="control-btn btn-sm btn-danger" onclick="dashboard.executeHydraCommand(this, 'pwrdis', {slot: '7', level: 'high'})" title="Set PWRDIS# high for Slot 7 (disable power)">7</button>
+                    <button class="control-btn btn-sm btn-danger" onclick="dashboard.executeHydraCommand(this, 'pwrdis', {slot: '8', level: 'high'})" title="Set PWRDIS# high for Slot 8 (disable power)">8</button>
+                </div>
+                <div class="control-btn-group" style="margin-top: 8px;">
+                    <button class="control-btn btn-wide btn-success" onclick="dashboard.executeHydraCommand(this, 'pwrdis', {slot: 'all', level: 'low'})" title="Set PWRDIS# low for all slots (enable power)">All Low (Enable)</button>
+                    <button class="control-btn btn-wide btn-danger" onclick="dashboard.executeHydraCommand(this, 'pwrdis', {slot: 'all', level: 'high'})" title="Set PWRDIS# high for all slots (disable power)">All High (Disable)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

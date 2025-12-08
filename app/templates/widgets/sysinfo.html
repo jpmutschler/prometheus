@@ -1,0 +1,23 @@
+<template id="widget-sysinfo">
+    <div class="widget-content">
+        <div class="widget-header">
+            <h3>System Info</h3>
+            <div class="widget-actions">
+                <button class="btn-icon" onclick="dashboard.exportWidgetData(this, 'json')" title="Export JSON">📋</button>
+                <button class="btn-icon" onclick="dashboard.exportWidgetData(this, 'txt')" title="Export TXT">📄</button>
+                <button class="btn-icon" onclick="dashboard.refreshSysinfo(this)" title="Refresh">🔄</button>
+                <button class="btn-icon btn-remove" onclick="dashboard.removeWidget(this)" title="Remove">✕</button>
+            </div>
+        </div>
+        <div class="widget-body">
+            <div class="device-selector-bar">
+                <select class="widget-device-select" onchange="dashboard.onWidgetDeviceChange(this)">
+                    <option value="">Select device...</option>
+                </select>
+            </div>
+            <div class="sysinfo-content">
+                <div class="placeholder-message">Select a device to view system information</div>
+            </div>
+        </div>
+    </div>
+</template>

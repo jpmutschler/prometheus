@@ -1,0 +1,89 @@
+2025-12-04 17:03:53 [INFO] prometheus: ============================================================
+2025-12-04 17:03:53 [INFO] prometheus: Prometheus server starting
+2025-12-04 17:03:53 [INFO] prometheus: ============================================================
+2025-12-04 17:03:53 [INFO] prometheus: Checking for Serial Cables library updates
+2025-12-04 17:03:53 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-04 17:03:53 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-04 17:03:53 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
+2025-12-04 17:03:53 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
+2025-12-04 17:03:53 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
+2025-12-04 17:03:53 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
+2025-12-04 17:03:53 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-04 17:03:53 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-04 17:03:53 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-04 17:03:53 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-04 17:03:53 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
+2025-12-04 17:03:53 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
+2025-12-04 17:03:53 [INFO] app.detection: Detected atlas3 on COM12: PCI6-AD-x16HI-BG6-144
+2025-12-04 17:03:53 [INFO] app.detection: Detected atlas3 on COM12: PCI6-AD-x16HI-BG6-144
+2025-12-04 17:03:53 [INFO] app.detection: Fast scan complete: 2/2 devices found
+2025-12-04 17:03:53 [INFO] app.detection: Fast scan complete: 2/2 devices found
+2025-12-04 17:03:55 [DEBUG] prometheus: serialcables-atlas3 is up to date
+2025-12-04 17:03:56 [DEBUG] prometheus: serialcables-hydra is up to date
+2025-12-04 17:03:57 [INFO] prometheus: Server accessible at http://localhost:5000 and http://192.168.5.106:5000
+2025-12-04 17:03:57 [WARNING] werkzeug: Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2025-12-04 17:03:57 [WARNING] werkzeug: Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2025-12-04 17:03:57 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.106:5000
+2025-12-04 17:03:57 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.5.106:5000
+2025-12-04 17:03:57 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2025-12-04 17:03:57 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2025-12-04 17:03:59 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:03:59] "GET / HTTP/1.1" 200 -
+2025-12-04 17:03:59 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:03:59] "GET / HTTP/1.1" 200 -
+2025-12-04 17:03:59 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:03:59] "[36mGET /static/js/devices/device-registry.js HTTP/1.1[0m" 304 -
+2025-12-04 17:03:59 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:03:59] "[36mGET /static/js/devices/device-registry.js HTTP/1.1[0m" 304 -
+2025-12-04 17:03:59 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:03:59] "[36mGET /static/js/devices/atlas3.js HTTP/1.1[0m" 304 -
+2025-12-04 17:03:59 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:03:59] "[36mGET /static/js/devices/atlas3.js HTTP/1.1[0m" 304 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "[36mGET /static/js/devices/hydra.js HTTP/1.1[0m" 304 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "[36mGET /static/js/devices/hydra.js HTTP/1.1[0m" 304 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET /socket.io/?EIO=4&transport=polling&t=PhhqfvC HTTP/1.1" 200 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET /socket.io/?EIO=4&transport=polling&t=PhhqfvC HTTP/1.1" 200 -
+2025-12-04 17:04:00 [INFO] app.websocket: Client connected: 192.168.5.106
+2025-12-04 17:04:00 [INFO] app.websocket: Client connected: 192.168.5.106
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "POST /socket.io/?EIO=4&transport=polling&t=PhhqfwE&sid=lO35EITpj0N0pNedAAAA HTTP/1.1" 200 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET /socket.io/?EIO=4&transport=polling&t=PhhqfwG&sid=lO35EITpj0N0pNedAAAA HTTP/1.1" 200 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET /socket.io/?EIO=4&transport=polling&t=PhhqfwG&sid=lO35EITpj0N0pNedAAAA HTTP/1.1" 200 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "POST /socket.io/?EIO=4&transport=polling&t=PhhqfwE&sid=lO35EITpj0N0pNedAAAA HTTP/1.1" 200 -
+2025-12-04 17:04:00 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-04 17:04:00 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-04 17:04:00 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
+2025-12-04 17:04:00 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
+2025-12-04 17:04:00 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
+2025-12-04 17:04:00 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
+2025-12-04 17:04:00 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-04 17:04:00 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-04 17:04:00 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-04 17:04:00 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET / HTTP/1.1" 200 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET / HTTP/1.1" 200 -
+2025-12-04 17:04:00 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
+2025-12-04 17:04:00 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
+2025-12-04 17:04:00 [INFO] app.detection: Detected atlas3 on COM12: PCI6-AD-x16HI-BG6-144
+2025-12-04 17:04:00 [INFO] app.detection: Detected atlas3 on COM12: PCI6-AD-x16HI-BG6-144
+2025-12-04 17:04:00 [INFO] app.detection: Fast scan complete: 2/2 devices found
+2025-12-04 17:04:00 [INFO] app.detection: Fast scan complete: 2/2 devices found
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET /socket.io/?EIO=4&transport=polling&t=Phhqg4a&sid=lO35EITpj0N0pNedAAAA HTTP/1.1" 200 -
+2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET /socket.io/?EIO=4&transport=polling&t=Phhqg4a&sid=lO35EITpj0N0pNedAAAA HTTP/1.1" 200 -
+2025-12-04 17:04:03 [INFO] app.api: Connected to atlas3 on COM12 as atlas3_12
+2025-12-04 17:04:03 [INFO] app.api: Connected to atlas3 on COM12 as atlas3_12
+2025-12-04 17:04:03 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:03] "POST /api/connect HTTP/1.1" 200 -
+2025-12-04 17:04:03 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:03] "POST /api/connect HTTP/1.1" 200 -
+2025-12-04 17:04:11 [INFO] app.api: Executing error_counters on atlas3_12 with params: {}
+2025-12-04 17:04:11 [INFO] app.api: Executing error_counters on atlas3_12 with params: {}
+2025-12-04 17:04:12 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:12] "POST /api/device/atlas3_12/command HTTP/1.1" 200 -
+2025-12-04 17:04:12 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:12] "POST /api/device/atlas3_12/command HTTP/1.1" 200 -
+2025-12-04 17:05:43 [INFO] app.api: Disconnected from atlas3_12
+2025-12-04 17:05:43 [INFO] app.api: Disconnected from atlas3_12
+2025-12-04 17:05:43 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:05:43] "POST /api/disconnect/atlas3_12 HTTP/1.1" 200 -
+2025-12-04 17:05:43 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:05:43] "POST /api/disconnect/atlas3_12 HTTP/1.1" 200 -

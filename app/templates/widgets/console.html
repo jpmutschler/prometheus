@@ -1,0 +1,27 @@
+<template id="widget-console">
+    <div class="widget-content">
+        <div class="widget-header">
+            <h3>Command Console</h3>
+            <div class="widget-actions">
+                <button class="btn-icon" onclick="dashboard.clearConsole(this)" title="Clear">🗑️</button>
+                <button class="btn-icon" onclick="dashboard.exportWidgetData(this, 'txt')" title="Export">📄</button>
+                <button class="btn-icon btn-remove" onclick="dashboard.removeWidget(this)" title="Remove">✕</button>
+            </div>
+        </div>
+        <div class="widget-body console-widget">
+            <div class="device-selector-bar">
+                <select class="widget-device-select" onchange="dashboard.onWidgetDeviceChange(this)">
+                    <option value="">Select device...</option>
+                </select>
+            </div>
+            <div class="console-output"></div>
+            <div class="console-input-area">
+                <select class="command-select">
+                    <option value="">Select command...</option>
+                </select>
+                <input type="text" class="command-params" placeholder="Parameters (JSON)">
+                <button class="btn btn-primary" onclick="dashboard.executeCommand(this)">Run</button>
+            </div>
+        </div>
+    </div>
+</template>

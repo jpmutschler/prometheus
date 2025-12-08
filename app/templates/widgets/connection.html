@@ -1,0 +1,32 @@
+<template id="widget-connection">
+    <div class="widget-content">
+        <div class="widget-header">
+            <h3>Connection Manager</h3>
+            <div class="widget-actions">
+                <button class="btn-icon" onclick="dashboard.scanForDevices(this)" title="Scan for devices">🔄</button>
+                <button class="btn-icon btn-remove" onclick="dashboard.removeWidget(this)" title="Remove">✕</button>
+            </div>
+        </div>
+        <div class="widget-body">
+            <!-- Detected Devices Section -->
+            <div class="detected-devices-section">
+                <div class="section-header">
+                    <span>Available Devices</span>
+                    <span class="scan-status-indicator"></span>
+                </div>
+                <div class="detected-devices-list">
+                    <div class="placeholder-message scanning-message" style="display: none;">Scanning for devices...</div>
+                    <div class="placeholder-message no-devices-message">No devices detected. Click 🔄 to scan.</div>
+                </div>
+            </div>
+
+            <!-- Connected Devices Section -->
+            <div class="connected-devices-section">
+                <div class="section-header">Connected Devices</div>
+                <div class="connected-devices-items">
+                    <div class="placeholder-message">No devices connected</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

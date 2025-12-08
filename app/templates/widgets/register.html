@@ -1,0 +1,28 @@
+<template id="widget-register">
+    <div class="widget-content">
+        <div class="widget-header">
+            <h3>Register Explorer</h3>
+            <div class="widget-actions">
+                <button class="btn-icon btn-remove" onclick="dashboard.removeWidget(this)" title="Remove">✕</button>
+            </div>
+        </div>
+        <div class="widget-body">
+            <div class="device-selector-bar">
+                <select class="widget-device-select" onchange="dashboard.onWidgetDeviceChange(this)">
+                    <option value="">Select device...</option>
+                </select>
+            </div>
+            <div class="register-form">
+                <div class="form-row">
+                    <input type="text" class="register-address" placeholder="Address (0x...)">
+                    <input type="text" class="register-value" placeholder="Value (0x...)">
+                </div>
+                <div class="form-actions">
+                    <button class="btn btn-primary" onclick="dashboard.readRegister(this)">Read</button>
+                    <button class="btn btn-secondary" onclick="dashboard.writeRegister(this)">Write</button>
+                </div>
+            </div>
+            <div class="register-result"></div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,35 @@
+<template id="widget-errors">
+    <div class="widget-content">
+        <div class="widget-header">
+            <h3>Error Counters</h3>
+            <div class="widget-actions">
+                <button class="btn-icon" onclick="dashboard.clearErrorCounters(this)" title="Clear Counters">🗑️</button>
+                <button class="btn-icon" onclick="dashboard.refreshErrors(this)" title="Refresh">🔄</button>
+                <button class="btn-icon btn-remove" onclick="dashboard.removeWidget(this)" title="Remove">✕</button>
+            </div>
+        </div>
+        <div class="widget-body">
+            <div class="status-toolbar">
+                <select class="widget-device-select" onchange="dashboard.onWidgetDeviceChange(this)" data-device-type="atlas3">
+                    <option value="">Select Atlas3 device...</option>
+                </select>
+                <div class="auto-refresh-control">
+                    <label class="auto-refresh-label">
+                        <input type="checkbox" class="auto-refresh-toggle" onchange="dashboard.toggleAutoRefresh(this)">
+                        Auto
+                    </label>
+                    <select class="auto-refresh-interval" onchange="dashboard.updateRefreshInterval(this)">
+                        <option value="1000">1s</option>
+                        <option value="2000" selected>2s</option>
+                        <option value="5000">5s</option>
+                        <option value="10000">10s</option>
+                        <option value="30000">30s</option>
+                    </select>
+                </div>
+            </div>
+            <div class="errors-content">
+                <div class="placeholder-message">Select an Atlas3 device to view error counters</div>
+            </div>
+        </div>
+    </div>
+</template>

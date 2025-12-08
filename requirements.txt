@@ -1,0 +1,17 @@
+# Prometheus - Serial Cables Hardware Dashboard
+# Flask and extensions
+flask>=3.0.0
+flask-socketio>=5.3.0
+flask-cors>=4.0.0
+python-socketio>=5.10.0
+eventlet>=0.35.0
+
+# Serial communication
+pyserial>=3.5
+
+# Serial Cables APIs (install from local or PyPI/pip)
+serialcables-atlas3
+serialcables-hydra
+
+# Utilities
+python-dotenv>=1.0.0
