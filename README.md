@@ -9,7 +9,7 @@ A Flask-based web dashboard for monitoring and controlling Serial Cables hardwar
 ## Features
 
 ### Device Support
-- **Atlas3 PCIe Gen6 Switch** - 16-port PCIe switch with full monitoring and control
+- **Atlas3 PCIe Gen6 Switch** - Gen6 PCIe switch with full monitoring and control
 - **HYDRA JBOF Controller** - Just a Bunch of Flash controller with 8 drive bays
 
 ### Core Capabilities
@@ -27,7 +27,7 @@ A Flask-based web dashboard for monitoring and controlling Serial Cables hardwar
 
 ```bash
 # Clone the repository
-git clone https://github.com/serialcables/prometheus.git
+git clone https://github.com/jpmutschler/prometheus.git
 cd prometheus
 
 # Create virtual environment

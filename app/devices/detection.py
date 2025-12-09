@@ -175,22 +175,58 @@ class DeviceSignatures:
 
         Supports multiple HWID formats:
         - Windows: USB\VID_045B&PID_5300
-        - pyserial: USB VID:PID=045B:5300
+        - pyserial Windows: USB VID:PID=045B:5300
+        - Linux pyserial: USB VID:PID=045b:5300 (lowercase)
+        - Linux sysfs style: 045b:5300
         """
         if not hwid:
             return None
 
         hwid_upper = hwid.upper()
         for vid, pid, device_type in self.get_known_usb_ids():
+            vid_upper = vid.upper()
+            pid_upper = pid.upper()
+
             # Match VID_xxxx&PID_xxxx pattern (Windows device manager format)
-            if f'VID_{vid}' in hwid_upper and f'PID_{pid}' in hwid_upper:
+            if f'VID_{vid_upper}' in hwid_upper and f'PID_{pid_upper}' in hwid_upper:
                 return device_type
-            # Match VID:PID=xxxx:xxxx pattern (pyserial format)
-            if f'VID:PID={vid}:{pid}' in hwid_upper:
+            # Match VID:PID=xxxx:xxxx pattern (pyserial format - both Windows and Linux)
+            if f'VID:PID={vid_upper}:{pid_upper}' in hwid_upper:
                 return device_type
-            # Match just the VID and PID values separated by colon
-            if f'{vid}:{pid}' in hwid_upper:
+            # Match just the VID and PID values separated by colon (Linux lsusb style)
+            if f'{vid_upper}:{pid_upper}' in hwid_upper:
                 return device_type
+        return None
+
+    def match_port_info(self, port_info) -> Optional[str]:
+        """
+        Check if a port_info object matches any known device.
+        Checks both HWID and VID/PID attributes directly.
+
+        Args:
+            port_info: pyserial ListPortInfo object
+
+        Returns:
+            device_type if matched, None otherwise
+        """
+        # First try HWID matching (works on Windows)
+        if port_info.hwid:
+            matched = self.match_usb_id(port_info.hwid)
+            if matched:
+                return matched
+
+        # On Linux, pyserial provides vid/pid as integer attributes
+        if hasattr(port_info, 'vid') and hasattr(port_info, 'pid'):
+            vid = port_info.vid
+            pid = port_info.pid
+            if vid is not None and pid is not None:
+                # Convert to hex string for comparison
+                vid_hex = f'{vid:04X}'
+                pid_hex = f'{pid:04X}'
+                for known_vid, known_pid, device_type in self.get_known_usb_ids():
+                    if vid_hex == known_vid.upper() and pid_hex == known_pid.upper():
+                        return device_type
+
         return None
 
 
@@ -499,15 +535,24 @@ class DetectionCache:
                 for port_info in all_port_info:
                     if port_info.device in exclude_ports:
                         continue
-                    # Check if this port's HWID matches a known device
-                    matched_type = signatures.match_usb_id(port_info.hwid)
+                    # Check if this port matches a known device (supports both Windows and Linux)
+                    matched_type = signatures.match_port_info(port_info)
                     if matched_type:
                         ports_to_scan.append(port_info.device)
-                        logger.debug(f'Port {port_info.device} matches {matched_type} '
-                                   f'(HWID: {port_info.hwid})')
+                        # Log with available info (vid/pid on Linux, hwid on Windows)
+                        vid_pid_info = ''
+                        if hasattr(port_info, 'vid') and port_info.vid is not None:
+                            vid_pid_info = f'VID={port_info.vid:04X} PID={port_info.pid:04X}'
+                        else:
+                            vid_pid_info = f'HWID: {port_info.hwid}'
+                        logger.debug(f'Port {port_info.device} matches {matched_type} ({vid_pid_info})')
                     else:
-                        logger.debug(f'Skipping {port_info.device} - unknown USB ID '
-                                   f'(HWID: {port_info.hwid})')
+                        vid_pid_info = ''
+                        if hasattr(port_info, 'vid') and port_info.vid is not None:
+                            vid_pid_info = f'VID={port_info.vid:04X} PID={port_info.pid:04X}'
+                        else:
+                            vid_pid_info = f'HWID: {port_info.hwid}'
+                        logger.debug(f'Skipping {port_info.device} - unknown USB ID ({vid_pid_info})')
             else:
                 ports_to_scan = [p.device for p in all_port_info
                                if p.device not in exclude_ports]

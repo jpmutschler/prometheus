@@ -34,14 +34,19 @@ def list_ports():
     """Scan and list available COM ports"""
     ports = []
     for port in serial.tools.list_ports.comports():
-        ports.append({
+        port_info = {
             'device': port.device,
             'description': port.description,
             'hwid': port.hwid,
             'manufacturer': port.manufacturer or '',
             'product': port.product or '',
             'serial_number': port.serial_number or ''
-        })
+        }
+        # Include VID/PID if available (useful on Linux where hwid may differ)
+        if hasattr(port, 'vid') and port.vid is not None:
+            port_info['vid'] = f'{port.vid:04X}'
+            port_info['pid'] = f'{port.pid:04X}'
+        ports.append(port_info)
     logger.debug(f'COM port scan: found {len(ports)} ports')
     return jsonify({'ports': ports})
 

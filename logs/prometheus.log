@@ -1,89 +1,1677 @@
-2025-12-04 17:03:53 [INFO] prometheus: ============================================================
-2025-12-04 17:03:53 [INFO] prometheus: Prometheus server starting
-2025-12-04 17:03:53 [INFO] prometheus: ============================================================
-2025-12-04 17:03:53 [INFO] prometheus: Checking for Serial Cables library updates
-2025-12-04 17:03:53 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
-2025-12-04 17:03:53 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
-2025-12-04 17:03:53 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
-2025-12-04 17:03:53 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
-2025-12-04 17:03:53 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
-2025-12-04 17:03:53 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
-2025-12-04 17:03:53 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
-2025-12-04 17:03:53 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
-2025-12-04 17:03:53 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
-2025-12-04 17:03:53 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
-2025-12-04 17:03:53 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
-2025-12-04 17:03:53 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
-2025-12-04 17:03:53 [INFO] app.detection: Detected atlas3 on COM12: PCI6-AD-x16HI-BG6-144
-2025-12-04 17:03:53 [INFO] app.detection: Detected atlas3 on COM12: PCI6-AD-x16HI-BG6-144
-2025-12-04 17:03:53 [INFO] app.detection: Fast scan complete: 2/2 devices found
-2025-12-04 17:03:53 [INFO] app.detection: Fast scan complete: 2/2 devices found
-2025-12-04 17:03:55 [DEBUG] prometheus: serialcables-atlas3 is up to date
-2025-12-04 17:03:56 [DEBUG] prometheus: serialcables-hydra is up to date
-2025-12-04 17:03:57 [INFO] prometheus: Server accessible at http://localhost:5000 and http://192.168.5.106:5000
-2025-12-04 17:03:57 [WARNING] werkzeug: Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
-2025-12-04 17:03:57 [WARNING] werkzeug: Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
-2025-12-04 17:03:57 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-12-09 09:02:50 [INFO] prometheus: ============================================================
+2025-12-09 09:02:50 [INFO] prometheus: Prometheus server starting
+2025-12-09 09:02:50 [INFO] prometheus: ============================================================
+2025-12-09 09:02:50 [INFO] prometheus: Checking for Serial Cables library updates
+2025-12-09 09:02:50 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-09 09:02:50 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-09 09:02:50 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-6)
+2025-12-09 09:02:50 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-6)
+2025-12-09 09:02:50 [DEBUG] app.detection: Port COM5 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&5 LOCATION=1-5:x.0)
+2025-12-09 09:02:50 [DEBUG] app.detection: Port COM5 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&5 LOCATION=1-5:x.0)
+2025-12-09 09:02:50 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-09 09:02:50 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-09 09:02:50 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-09 09:02:50 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-09 09:02:50 [INFO] app.detection: Detected atlas3 on COM5: PCI6-AD-x16HI-BG6-144
+2025-12-09 09:02:50 [INFO] app.detection: Detected atlas3 on COM5: PCI6-AD-x16HI-BG6-144
+2025-12-09 09:02:50 [INFO] app.detection: Fast scan complete: 1/2 devices found
+2025-12-09 09:02:50 [INFO] app.detection: Fast scan complete: 1/2 devices found
+2025-12-09 09:02:51 [DEBUG] prometheus: serialcables-atlas3 is up to date
+2025-12-09 09:02:52 [DEBUG] prometheus: serialcables-hydra is up to date
+2025-12-09 09:02:52 [INFO] prometheus: Server accessible at http://localhost:5000 and http://192.168.5.106:5000
+2025-12-09 09:02:52 [WARNING] werkzeug: Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2025-12-09 09:02:52 [WARNING] werkzeug: Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2025-12-09 09:02:52 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.5.106:5000
-2025-12-04 17:03:57 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-12-09 09:02:52 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.5.106:5000
-2025-12-04 17:03:57 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
-2025-12-04 17:03:57 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
-2025-12-04 17:03:59 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:03:59] "GET / HTTP/1.1" 200 -
-2025-12-04 17:03:59 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:03:59] "GET / HTTP/1.1" 200 -
-2025-12-04 17:03:59 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:03:59] "[36mGET /static/js/devices/device-registry.js HTTP/1.1[0m" 304 -
-2025-12-04 17:03:59 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:03:59] "[36mGET /static/js/devices/device-registry.js HTTP/1.1[0m" 304 -
-2025-12-04 17:03:59 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:03:59] "[36mGET /static/js/devices/atlas3.js HTTP/1.1[0m" 304 -
-2025-12-04 17:03:59 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:03:59] "[36mGET /static/js/devices/atlas3.js HTTP/1.1[0m" 304 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "[36mGET /static/js/devices/hydra.js HTTP/1.1[0m" 304 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "[36mGET /static/js/devices/hydra.js HTTP/1.1[0m" 304 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET /socket.io/?EIO=4&transport=polling&t=PhhqfvC HTTP/1.1" 200 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET /socket.io/?EIO=4&transport=polling&t=PhhqfvC HTTP/1.1" 200 -
-2025-12-04 17:04:00 [INFO] app.websocket: Client connected: 192.168.5.106
-2025-12-04 17:04:00 [INFO] app.websocket: Client connected: 192.168.5.106
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "POST /socket.io/?EIO=4&transport=polling&t=PhhqfwE&sid=lO35EITpj0N0pNedAAAA HTTP/1.1" 200 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET /socket.io/?EIO=4&transport=polling&t=PhhqfwG&sid=lO35EITpj0N0pNedAAAA HTTP/1.1" 200 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET /socket.io/?EIO=4&transport=polling&t=PhhqfwG&sid=lO35EITpj0N0pNedAAAA HTTP/1.1" 200 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "POST /socket.io/?EIO=4&transport=polling&t=PhhqfwE&sid=lO35EITpj0N0pNedAAAA HTTP/1.1" 200 -
-2025-12-04 17:04:00 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
-2025-12-04 17:04:00 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
-2025-12-04 17:04:00 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
-2025-12-04 17:04:00 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
-2025-12-04 17:04:00 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
-2025-12-04 17:04:00 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
-2025-12-04 17:04:00 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
-2025-12-04 17:04:00 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
-2025-12-04 17:04:00 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
-2025-12-04 17:04:00 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET / HTTP/1.1" 200 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET / HTTP/1.1" 200 -
-2025-12-04 17:04:00 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
-2025-12-04 17:04:00 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
-2025-12-04 17:04:00 [INFO] app.detection: Detected atlas3 on COM12: PCI6-AD-x16HI-BG6-144
-2025-12-04 17:04:00 [INFO] app.detection: Detected atlas3 on COM12: PCI6-AD-x16HI-BG6-144
-2025-12-04 17:04:00 [INFO] app.detection: Fast scan complete: 2/2 devices found
-2025-12-04 17:04:00 [INFO] app.detection: Fast scan complete: 2/2 devices found
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "POST /api/detect-all HTTP/1.1" 200 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "POST /api/detect-all HTTP/1.1" 200 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET /socket.io/?EIO=4&transport=polling&t=Phhqg4a&sid=lO35EITpj0N0pNedAAAA HTTP/1.1" 200 -
-2025-12-04 17:04:00 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:00] "GET /socket.io/?EIO=4&transport=polling&t=Phhqg4a&sid=lO35EITpj0N0pNedAAAA HTTP/1.1" 200 -
-2025-12-04 17:04:03 [INFO] app.api: Connected to atlas3 on COM12 as atlas3_12
-2025-12-04 17:04:03 [INFO] app.api: Connected to atlas3 on COM12 as atlas3_12
-2025-12-04 17:04:03 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:03] "POST /api/connect HTTP/1.1" 200 -
-2025-12-04 17:04:03 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:03] "POST /api/connect HTTP/1.1" 200 -
-2025-12-04 17:04:11 [INFO] app.api: Executing error_counters on atlas3_12 with params: {}
-2025-12-04 17:04:11 [INFO] app.api: Executing error_counters on atlas3_12 with params: {}
-2025-12-04 17:04:12 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:12] "POST /api/device/atlas3_12/command HTTP/1.1" 200 -
-2025-12-04 17:04:12 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:04:12] "POST /api/device/atlas3_12/command HTTP/1.1" 200 -
-2025-12-04 17:05:43 [INFO] app.api: Disconnected from atlas3_12
-2025-12-04 17:05:43 [INFO] app.api: Disconnected from atlas3_12
-2025-12-04 17:05:43 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:05:43] "POST /api/disconnect/atlas3_12 HTTP/1.1" 200 -
-2025-12-04 17:05:43 [INFO] werkzeug: 192.168.5.106 - - [04/Dec/2025 17:05:43] "POST /api/disconnect/atlas3_12 HTTP/1.1" 200 -
+2025-12-09 09:02:52 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2025-12-09 09:02:52 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2025-12-09 09:02:54 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:54] "GET / HTTP/1.1" 200 -
+2025-12-09 09:02:54 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:54] "GET / HTTP/1.1" 200 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "[36mGET /static/js/devices/device-registry.js HTTP/1.1[0m" 304 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "[36mGET /static/js/devices/device-registry.js HTTP/1.1[0m" 304 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "[36mGET /static/js/devices/atlas3.js HTTP/1.1[0m" 304 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "[36mGET /static/js/devices/atlas3.js HTTP/1.1[0m" 304 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "[36mGET /static/js/devices/hydra.js HTTP/1.1[0m" 304 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "[36mGET /static/js/devices/hydra.js HTTP/1.1[0m" 304 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "GET /socket.io/?EIO=4&transport=polling&t=Pi3sVc4 HTTP/1.1" 200 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "GET /socket.io/?EIO=4&transport=polling&t=Pi3sVc4 HTTP/1.1" 200 -
+2025-12-09 09:02:55 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-09 09:02:55 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-09 09:02:55 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-6)
+2025-12-09 09:02:55 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-6)
+2025-12-09 09:02:55 [DEBUG] app.detection: Port COM5 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&5 LOCATION=1-5:x.0)
+2025-12-09 09:02:55 [DEBUG] app.detection: Port COM5 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&5 LOCATION=1-5:x.0)
+2025-12-09 09:02:55 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-09 09:02:55 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-09 09:02:55 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-09 09:02:55 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-09 09:02:55 [INFO] app.websocket: Client connected: 192.168.5.106
+2025-12-09 09:02:55 [INFO] app.websocket: Client connected: 192.168.5.106
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "POST /socket.io/?EIO=4&transport=polling&t=Pi3sVcg&sid=ac0D0NVSy4HVNIm-AAAA HTTP/1.1" 200 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "POST /socket.io/?EIO=4&transport=polling&t=Pi3sVcg&sid=ac0D0NVSy4HVNIm-AAAA HTTP/1.1" 200 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "GET /socket.io/?EIO=4&transport=polling&t=Pi3sVci&sid=ac0D0NVSy4HVNIm-AAAA HTTP/1.1" 200 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "GET /socket.io/?EIO=4&transport=polling&t=Pi3sVci&sid=ac0D0NVSy4HVNIm-AAAA HTTP/1.1" 200 -
+2025-12-09 09:02:55 [INFO] app.detection: Detected atlas3 on COM5: PCI6-AD-x16HI-BG6-144
+2025-12-09 09:02:55 [INFO] app.detection: Detected atlas3 on COM5: PCI6-AD-x16HI-BG6-144
+2025-12-09 09:02:55 [INFO] app.detection: Fast scan complete: 1/2 devices found
+2025-12-09 09:02:55 [INFO] app.detection: Fast scan complete: 1/2 devices found
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-09 09:02:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:55] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-09 09:02:56 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:56] "GET /socket.io/?EIO=4&transport=polling&t=Pi3sVwd&sid=ac0D0NVSy4HVNIm-AAAA HTTP/1.1" 200 -
+2025-12-09 09:02:56 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:56] "GET /socket.io/?EIO=4&transport=polling&t=Pi3sVwd&sid=ac0D0NVSy4HVNIm-AAAA HTTP/1.1" 200 -
+2025-12-09 09:02:57 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:57] "GET / HTTP/1.1" 200 -
+2025-12-09 09:02:57 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:02:57] "GET / HTTP/1.1" 200 -
+2025-12-09 09:03:06 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-09 09:03:06 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-09 09:03:06 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-6)
+2025-12-09 09:03:06 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-6)
+2025-12-09 09:03:06 [DEBUG] app.detection: Port COM5 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&5 LOCATION=1-5:x.0)
+2025-12-09 09:03:06 [DEBUG] app.detection: Port COM5 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&5 LOCATION=1-5:x.0)
+2025-12-09 09:03:06 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-09 09:03:06 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-09 09:03:06 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-09 09:03:06 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-09 09:03:06 [INFO] app.detection: Detected atlas3 on COM5: PCI6-AD-x16HI-BG6-144
+2025-12-09 09:03:06 [INFO] app.detection: Detected atlas3 on COM5: PCI6-AD-x16HI-BG6-144
+2025-12-09 09:03:06 [INFO] app.detection: Fast scan complete: 1/2 devices found
+2025-12-09 09:03:06 [INFO] app.detection: Fast scan complete: 1/2 devices found
+2025-12-09 09:03:06 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:03:06] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-09 09:03:06 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:03:06] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-09 09:03:20 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-09 09:03:20 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-09 09:03:20 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
+2025-12-09 09:03:20 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
+2025-12-09 09:03:20 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
+2025-12-09 09:03:20 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
+2025-12-09 09:03:20 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-09 09:03:20 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-09 09:03:20 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-09 09:03:20 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-09 09:03:20 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
+2025-12-09 09:03:20 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
+2025-12-09 09:03:20 [INFO] app.detection: Fast scan complete: 1/2 devices found
+2025-12-09 09:03:20 [INFO] app.detection: Fast scan complete: 1/2 devices found
+2025-12-09 09:03:20 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:03:20] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-09 09:03:20 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:03:20] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-09 09:03:28 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-09 09:03:28 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-09 09:03:28 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
+2025-12-09 09:03:28 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
+2025-12-09 09:03:28 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
+2025-12-09 09:03:28 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
+2025-12-09 09:03:28 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-09 09:03:28 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-09 09:03:28 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-09 09:03:28 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-09 09:03:29 [INFO] app.detection: Fast scan complete: 0/2 devices found
+2025-12-09 09:03:29 [INFO] app.detection: Fast scan complete: 0/2 devices found
+2025-12-09 09:03:29 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:03:29] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-09 09:03:29 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:03:29] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-09 09:03:29 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-09 09:03:29 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-09 09:03:29 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
+2025-12-09 09:03:29 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
+2025-12-09 09:03:29 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
+2025-12-09 09:03:29 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
+2025-12-09 09:03:29 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-09 09:03:29 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-09 09:03:29 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-09 09:03:29 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
+2025-12-09 09:03:30 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
+2025-12-09 09:03:30 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
+2025-12-09 09:03:30 [INFO] app.detection: Detected atlas3 on COM12: PCI6-AD-x16HI-BG6-144
+2025-12-09 09:03:30 [INFO] app.detection: Detected atlas3 on COM12: PCI6-AD-x16HI-BG6-144
+2025-12-09 09:03:30 [INFO] app.detection: Fast scan complete: 2/2 devices found
+2025-12-09 09:03:30 [INFO] app.detection: Fast scan complete: 2/2 devices found
+2025-12-09 09:03:30 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:03:30] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-09 09:03:30 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:03:30] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-09 09:34:24 [INFO] app.api: Connected to atlas3 on COM12 as atlas3_12
+2025-12-09 09:34:24 [INFO] app.api: Connected to atlas3 on COM12 as atlas3_12
+2025-12-09 09:34:24 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:34:24] "POST /api/connect HTTP/1.1" 200 -
+2025-12-09 09:34:24 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:34:24] "POST /api/connect HTTP/1.1" 200 -
+2025-12-09 09:34:26 [INFO] serialcables_hydra.controller: Connected to JBOF on COM13
+2025-12-09 09:34:26 [INFO] serialcables_hydra.controller: Connected to JBOF on COM13
+2025-12-09 09:34:27 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-09 09:34:27 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-09 09:34:27 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.5                                     ║
+║ Build Time : Nov  6 2025 22:09:41                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-09 09:34:27 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.5                                     ║
+║ Build Time : Nov  6 2025 22:09:41                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-09 09:34:27 [INFO] app.api: Connected to hydra on COM13 as hydra_13
+2025-12-09 09:34:27 [INFO] app.api: Connected to hydra on COM13 as hydra_13
+2025-12-09 09:34:27 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:34:27] "POST /api/connect HTTP/1.1" 200 -
+2025-12-09 09:34:27 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:34:27] "POST /api/connect HTTP/1.1" 200 -
+2025-12-09 09:34:36 [DEBUG] app.api: Getting sysinfo for atlas3_12
+2025-12-09 09:34:36 [DEBUG] app.api: Getting sysinfo for atlas3_12
+2025-12-09 09:34:36 [DEBUG] app.api: Successfully got sysinfo for atlas3_12
+2025-12-09 09:34:36 [DEBUG] app.api: Successfully got sysinfo for atlas3_12
+2025-12-09 09:34:36 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:34:36] "GET /api/device/atlas3_12/sysinfo HTTP/1.1" 200 -
+2025-12-09 09:34:36 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:34:36] "GET /api/device/atlas3_12/sysinfo HTTP/1.1" 200 -
+2025-12-09 09:34:45 [DEBUG] app.api: Getting sysinfo for hydra_13
+2025-12-09 09:34:45 [DEBUG] app.api: Getting sysinfo for hydra_13
+2025-12-09 09:34:45 [DEBUG] serialcables_hydra.controller: Sent: sysinfo
+2025-12-09 09:34:45 [DEBUG] serialcables_hydra.controller: Sent: sysinfo
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Received: sysinfo
+
+====================================================================================
+ver
+====================================================================================
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.5                                     ║
+║ Build Time : Nov  6 2025 22:09:41                      ║
+╚════════════════════════════════════════════════════════╝
+
+
+====================================================================================
+lsd
+====================================================================================
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 23°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 23°C
+
+  • Slot4 Temperature    : 21°C
+
+  • Slot5 Temperature    : 21°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8396  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.659 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.30 V
+  • Slot 1 Load Current   : 0.366 A
+  • Slot 1 Load Power     : 4.501 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.308 A
+  • Slot 2 Load Power     : 3.814 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+
+====================================================================================
+ssdpwr
+====================================================================================
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+
+====================================================================================
+dual
+====================================================================================
+
+Slot 1 dual : off
+Slot 2 dual : off
+Slot 3 dual : off
+Slot 4 dual : off
+Slot 5 dual : off
+Slot 6 dual : off
+Slot 7 dual : off
+Slot 8 dual : off
+
+====================================================================================
+pwrdis
+====================================================================================
+
+Slot 1 pwrdis level to low
+Slot 2 pwrdis level to low
+Slot 3 pwrdis level to low
+Slot 4 pwrdis level to low
+Slot 5 pwrdis level to low
+Slot 6 pwrdis level to low
+Slot 7 pwrdis level to low
+Slot 8 pwrdis level to low
+
+====================================================================================
+bist
+====================================================================================
+
+Channel   Device       Address    Status
+---------------------------------------------
+CH0      PCA9575-0     0x40       [32mOK[0m
+CH1      AT24C64       0xA0       [32mOK[0m
+CH1      PCA9575-1     0x50       [32mOK[0m
+CH1      PCA9575-2     0x50       [32mOK[0m
+CH1      PCA9575-3     0x50       [32mOK[0m
+CH1      PCA9575-4     0x50       [32mOK[0m
+CH1      PCA9575-5     0x50       [32mOK[0m
+CH1      PCA9575-6     0x50       [32mOK[0m
+CH1      PCA9575-7     0x50       [32mOK[0m
+CH1      PCA9575-8     0x50       [32mOK[0m
+CH1      INA219A-1     0x80       [32mOK[0m
+CH1      INA219A-2     0x80       [32mOK[0m
+CH1      INA219A-3     0x80       [32mOK[0m
+CH1      INA219A-4     0x80       [32mOK[0m
+CH1      INA219A-5     0x80       [32mOK[0m
+CH1      INA219A-6     0x80       [32mOK[0m
+CH1      INA219A-7     0x80       [32mOK[0m
+CH1      INA219A-8     0x80       [32mOK[0m
+
+Cmd>
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Received: sysinfo
+
+====================================================================================
+ver
+====================================================================================
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.5                                     ║
+║ Build Time : Nov  6 2025 22:09:41                      ║
+╚════════════════════════════════════════════════════════╝
+
+
+====================================================================================
+lsd
+====================================================================================
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 23°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 23°C
+
+  • Slot4 Temperature    : 21°C
+
+  • Slot5 Temperature    : 21°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8396  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.659 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.30 V
+  • Slot 1 Load Current   : 0.366 A
+  • Slot 1 Load Power     : 4.501 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.308 A
+  • Slot 2 Load Power     : 3.814 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+
+====================================================================================
+ssdpwr
+====================================================================================
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+
+====================================================================================
+dual
+====================================================================================
+
+Slot 1 dual : off
+Slot 2 dual : off
+Slot 3 dual : off
+Slot 4 dual : off
+Slot 5 dual : off
+Slot 6 dual : off
+Slot 7 dual : off
+Slot 8 dual : off
+
+====================================================================================
+pwrdis
+====================================================================================
+
+Slot 1 pwrdis level to low
+Slot 2 pwrdis level to low
+Slot 3 pwrdis level to low
+Slot 4 pwrdis level to low
+Slot 5 pwrdis level to low
+Slot 6 pwrdis level to low
+Slot 7 pwrdis level to low
+Slot 8 pwrdis level to low
+
+====================================================================================
+bist
+====================================================================================
+
+Channel   Device       Address    Status
+---------------------------------------------
+CH0      PCA9575-0     0x40       [32mOK[0m
+CH1      AT24C64       0xA0       [32mOK[0m
+CH1      PCA9575-1     0x50       [32mOK[0m
+CH1      PCA9575-2     0x50       [32mOK[0m
+CH1      PCA9575-3     0x50       [32mOK[0m
+CH1      PCA9575-4     0x50       [32mOK[0m
+CH1      PCA9575-5     0x50       [32mOK[0m
+CH1      PCA9575-6     0x50       [32mOK[0m
+CH1      PCA9575-7     0x50       [32mOK[0m
+CH1      PCA9575-8     0x50       [32mOK[0m
+CH1      INA219A-1     0x80       [32mOK[0m
+CH1      INA219A-2     0x80       [32mOK[0m
+CH1      INA219A-3     0x80       [32mOK[0m
+CH1      INA219A-4     0x80       [32mOK[0m
+CH1      INA219A-5     0x80       [32mOK[0m
+CH1      INA219A-6     0x80       [32mOK[0m
+CH1      INA219A-7     0x80       [32mOK[0m
+CH1      INA219A-8     0x80       [32mOK[0m
+
+Cmd>
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.5                                     ║
+║ Build Time : Nov  6 2025 22:09:41                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.5                                     ║
+║ Build Time : Nov  6 2025 22:09:41                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Sent: showslot
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Sent: showslot
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Received: showslot
+
+Slot01: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot02: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot03: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot04: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot05: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot06: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot07: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot08: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Cmd>
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Received: showslot
+
+Slot01: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot02: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot03: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot04: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot05: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot06: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot07: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot08: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Cmd>
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 23°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 23°C
+
+  • Slot4 Temperature    : 21°C
+
+  • Slot5 Temperature    : 21°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8396  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.659 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.30 V
+  • Slot 1 Load Current   : 0.372 A
+  • Slot 1 Load Power     : 4.580 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.307 A
+  • Slot 2 Load Power     : 3.775 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 23°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 23°C
+
+  • Slot4 Temperature    : 21°C
+
+  • Slot5 Temperature    : 21°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8396  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.659 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.30 V
+  • Slot 1 Load Current   : 0.372 A
+  • Slot 1 Load Power     : 4.580 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.307 A
+  • Slot 2 Load Power     : 3.775 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 23°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 23°C
+
+  • Slot4 Temperature    : 21°C
+
+  • Slot5 Temperature    : 21°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8396  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.659 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.30 V
+  • Slot 1 Load Current   : 0.371 A
+  • Slot 1 Load Power     : 4.550 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.307 A
+  • Slot 2 Load Power     : 3.796 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 23°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 23°C
+
+  • Slot4 Temperature    : 21°C
+
+  • Slot5 Temperature    : 21°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8396  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.659 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.30 V
+  • Slot 1 Load Current   : 0.371 A
+  • Slot 1 Load Power     : 4.550 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.307 A
+  • Slot 2 Load Power     : 3.796 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:34:46 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:34:46 [DEBUG] app.api: Successfully got sysinfo for hydra_13
+2025-12-09 09:34:46 [DEBUG] app.api: Successfully got sysinfo for hydra_13
+2025-12-09 09:34:46 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:34:46] "GET /api/device/hydra_13/sysinfo HTTP/1.1" 200 -
+2025-12-09 09:34:46 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:34:46] "GET /api/device/hydra_13/sysinfo HTTP/1.1" 200 -
+2025-12-09 09:35:01 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:35:01 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:35:01 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:35:01 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:35:01 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:35:01] "GET /api/device/hydra_13/control-status HTTP/1.1" 200 -
+2025-12-09 09:35:01 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:35:01] "GET /api/device/hydra_13/control-status HTTP/1.1" 200 -
+2025-12-09 09:35:14 [INFO] app.api: Executing pwmctrl on hydra_13 with params: {'fan_id': '1', 'duty': '25'}
+2025-12-09 09:35:14 [INFO] app.api: Executing pwmctrl on hydra_13 with params: {'fan_id': '1', 'duty': '25'}
+2025-12-09 09:35:14 [DEBUG] serialcables_hydra.controller: Sent: pwmctrl 1 25
+2025-12-09 09:35:14 [DEBUG] serialcables_hydra.controller: Sent: pwmctrl 1 25
+2025-12-09 09:35:14 [DEBUG] serialcables_hydra.controller: Received: pwmctrl 1 25
+
+Set duty 25 Success.
+Cmd>
+2025-12-09 09:35:14 [DEBUG] serialcables_hydra.controller: Received: pwmctrl 1 25
+
+Set duty 25 Success.
+Cmd>
+2025-12-09 09:35:14 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:35:14] "POST /api/device/hydra_13/control HTTP/1.1" 200 -
+2025-12-09 09:35:14 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:35:14] "POST /api/device/hydra_13/control HTTP/1.1" 200 -
+2025-12-09 09:35:14 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:35:14 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:35:14 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:35:14 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:35:14 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:35:14] "GET /api/device/hydra_13/control-status HTTP/1.1" 200 -
+2025-12-09 09:35:14 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:35:14] "GET /api/device/hydra_13/control-status HTTP/1.1" 200 -
+2025-12-09 09:35:48 [INFO] app.api: Executing error_counters on atlas3_12 with params: {}
+2025-12-09 09:35:48 [INFO] app.api: Executing error_counters on atlas3_12 with params: {}
+2025-12-09 09:35:48 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:35:48] "POST /api/device/atlas3_12/command HTTP/1.1" 200 -
+2025-12-09 09:35:48 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:35:48] "POST /api/device/atlas3_12/command HTTP/1.1" 200 -
+2025-12-09 09:37:59 [DEBUG] app.api: Getting sysinfo for hydra_13
+2025-12-09 09:37:59 [DEBUG] app.api: Getting sysinfo for hydra_13
+2025-12-09 09:37:59 [DEBUG] serialcables_hydra.controller: Sent: sysinfo
+2025-12-09 09:37:59 [DEBUG] serialcables_hydra.controller: Sent: sysinfo
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Received: sysinfo
+
+====================================================================================
+ver
+====================================================================================
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.5                                     ║
+║ Build Time : Nov  6 2025 22:09:41                      ║
+╚════════════════════════════════════════════════════════╝
+
+
+====================================================================================
+lsd
+====================================================================================
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 23°C
+
+  • Slot1 Temperature    : 25°C
+
+  • Slot2 Temperature    : 25°C
+
+  • Slot3 Temperature    : 23°C
+
+  • Slot4 Temperature    : 22°C
+
+  • Slot5 Temperature    : 22°C
+
+  • Slot6 Temperature    : 21°C
+
+  • Slot7 Temperature    : 20°C
+
+  • Slot8 Temperature    : 20°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 2174  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.671 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.31 V
+  • Slot 1 Load Current   : 0.373 A
+  • Slot 1 Load Power     : 4.598 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.310 A
+  • Slot 2 Load Power     : 3.790 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+
+====================================================================================
+ssdpwr
+====================================================================================
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+
+====================================================================================
+dual
+====================================================================================
+
+Slot 1 dual : off
+Slot 2 dual : off
+Slot 3 dual : off
+Slot 4 dual : off
+Slot 5 dual : off
+Slot 6 dual : off
+Slot 7 dual : off
+Slot 8 dual : off
+
+====================================================================================
+pwrdis
+====================================================================================
+
+Slot 1 pwrdis level to low
+Slot 2 pwrdis level to low
+Slot 3 pwrdis level to low
+Slot 4 pwrdis level to low
+Slot 5 pwrdis level to low
+Slot 6 pwrdis level to low
+Slot 7 pwrdis level to low
+Slot 8 pwrdis level to low
+
+====================================================================================
+bist
+====================================================================================
+
+Channel   Device       Address    Status
+---------------------------------------------
+CH0      PCA9575-0     0x40       [32mOK[0m
+CH1      AT24C64       0xA0       [32mOK[0m
+CH1      PCA9575-1     0x50       [32mOK[0m
+CH1      PCA9575-2     0x50       [32mOK[0m
+CH1      PCA9575-3     0x50       [32mOK[0m
+CH1      PCA9575-4     0x50       [32mOK[0m
+CH1      PCA9575-5     0x50       [32mOK[0m
+CH1      PCA9575-6     0x50       [32mOK[0m
+CH1      PCA9575-7     0x50       [32mOK[0m
+CH1      PCA9575-8     0x50       [32mOK[0m
+CH1      INA219A-1     0x80       [32mOK[0m
+CH1      INA219A-2     0x80       [32mOK[0m
+CH1      INA219A-3     0x80       [32mOK[0m
+CH1      INA219A-4     0x80       [32mOK[0m
+CH1      INA219A-5     0x80       [32mOK[0m
+CH1      INA219A-6     0x80       [32mOK[0m
+CH1      INA219A-7     0x80       [32mOK[0m
+CH1      INA219A-8     0x80       [32mOK[0m
+
+Cmd>
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Received: sysinfo
+
+====================================================================================
+ver
+====================================================================================
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.5                                     ║
+║ Build Time : Nov  6 2025 22:09:41                      ║
+╚════════════════════════════════════════════════════════╝
+
+
+====================================================================================
+lsd
+====================================================================================
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 23°C
+
+  • Slot1 Temperature    : 25°C
+
+  • Slot2 Temperature    : 25°C
+
+  • Slot3 Temperature    : 23°C
+
+  • Slot4 Temperature    : 22°C
+
+  • Slot5 Temperature    : 22°C
+
+  • Slot6 Temperature    : 21°C
+
+  • Slot7 Temperature    : 20°C
+
+  • Slot8 Temperature    : 20°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 2174  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.671 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.31 V
+  • Slot 1 Load Current   : 0.373 A
+  • Slot 1 Load Power     : 4.598 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.310 A
+  • Slot 2 Load Power     : 3.790 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+
+====================================================================================
+ssdpwr
+====================================================================================
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+
+====================================================================================
+dual
+====================================================================================
+
+Slot 1 dual : off
+Slot 2 dual : off
+Slot 3 dual : off
+Slot 4 dual : off
+Slot 5 dual : off
+Slot 6 dual : off
+Slot 7 dual : off
+Slot 8 dual : off
+
+====================================================================================
+pwrdis
+====================================================================================
+
+Slot 1 pwrdis level to low
+Slot 2 pwrdis level to low
+Slot 3 pwrdis level to low
+Slot 4 pwrdis level to low
+Slot 5 pwrdis level to low
+Slot 6 pwrdis level to low
+Slot 7 pwrdis level to low
+Slot 8 pwrdis level to low
+
+====================================================================================
+bist
+====================================================================================
+
+Channel   Device       Address    Status
+---------------------------------------------
+CH0      PCA9575-0     0x40       [32mOK[0m
+CH1      AT24C64       0xA0       [32mOK[0m
+CH1      PCA9575-1     0x50       [32mOK[0m
+CH1      PCA9575-2     0x50       [32mOK[0m
+CH1      PCA9575-3     0x50       [32mOK[0m
+CH1      PCA9575-4     0x50       [32mOK[0m
+CH1      PCA9575-5     0x50       [32mOK[0m
+CH1      PCA9575-6     0x50       [32mOK[0m
+CH1      PCA9575-7     0x50       [32mOK[0m
+CH1      PCA9575-8     0x50       [32mOK[0m
+CH1      INA219A-1     0x80       [32mOK[0m
+CH1      INA219A-2     0x80       [32mOK[0m
+CH1      INA219A-3     0x80       [32mOK[0m
+CH1      INA219A-4     0x80       [32mOK[0m
+CH1      INA219A-5     0x80       [32mOK[0m
+CH1      INA219A-6     0x80       [32mOK[0m
+CH1      INA219A-7     0x80       [32mOK[0m
+CH1      INA219A-8     0x80       [32mOK[0m
+
+Cmd>
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.5                                     ║
+║ Build Time : Nov  6 2025 22:09:41                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.5                                     ║
+║ Build Time : Nov  6 2025 22:09:41                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Sent: showslot
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Sent: showslot
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Received: showslot
+
+Slot01: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot02: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot03: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot04: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot05: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot06: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot07: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot08: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Cmd>
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Received: showslot
+
+Slot01: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot02: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot03: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot04: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot05: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot06: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot07: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot08: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Cmd>
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 23°C
+
+  • Slot1 Temperature    : 25°C
+
+  • Slot2 Temperature    : 25°C
+
+  • Slot3 Temperature    : 23°C
+
+  • Slot4 Temperature    : 22°C
+
+  • Slot5 Temperature    : 22°C
+
+  • Slot6 Temperature    : 21°C
+
+  • Slot7 Temperature    : 20°C
+
+  • Slot8 Temperature    : 20°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 2174  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.671 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.28 V
+  • Slot 1 Load Current   : 0.437 A
+  • Slot 1 Load Power     : 5.456 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.305 A
+  • Slot 2 Load Power     : 3.759 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 23°C
+
+  • Slot1 Temperature    : 25°C
+
+  • Slot2 Temperature    : 25°C
+
+  • Slot3 Temperature    : 23°C
+
+  • Slot4 Temperature    : 22°C
+
+  • Slot5 Temperature    : 22°C
+
+  • Slot6 Temperature    : 21°C
+
+  • Slot7 Temperature    : 20°C
+
+  • Slot8 Temperature    : 20°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 2174  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.671 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.28 V
+  • Slot 1 Load Current   : 0.437 A
+  • Slot 1 Load Power     : 5.456 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.305 A
+  • Slot 2 Load Power     : 3.759 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 23°C
+
+  • Slot1 Temperature    : 25°C
+
+  • Slot2 Temperature    : 25°C
+
+  • Slot3 Temperature    : 23°C
+
+  • Slot4 Temperature    : 22°C
+
+  • Slot5 Temperature    : 22°C
+
+  • Slot6 Temperature    : 21°C
+
+  • Slot7 Temperature    : 20°C
+
+  • Slot8 Temperature    : 20°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 2174  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.671 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.31 V
+  • Slot 1 Load Current   : 0.372 A
+  • Slot 1 Load Power     : 4.583 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.310 A
+  • Slot 2 Load Power     : 3.829 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 23°C
+
+  • Slot1 Temperature    : 25°C
+
+  • Slot2 Temperature    : 25°C
+
+  • Slot3 Temperature    : 23°C
+
+  • Slot4 Temperature    : 22°C
+
+  • Slot5 Temperature    : 22°C
+
+  • Slot6 Temperature    : 21°C
+
+  • Slot7 Temperature    : 20°C
+
+  • Slot8 Temperature    : 20°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 2174  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.671 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.31 V
+  • Slot 1 Load Current   : 0.372 A
+  • Slot 1 Load Power     : 4.583 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.310 A
+  • Slot 2 Load Power     : 3.829 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:38:00 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:38:00 [DEBUG] app.api: Successfully got sysinfo for hydra_13
+2025-12-09 09:38:00 [DEBUG] app.api: Successfully got sysinfo for hydra_13
+2025-12-09 09:38:00 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:38:00] "GET /api/device/hydra_13/sysinfo HTTP/1.1" 200 -
+2025-12-09 09:38:00 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:38:00] "GET /api/device/hydra_13/sysinfo HTTP/1.1" 200 -
+2025-12-09 09:43:25 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:43:25 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:43:25 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:43:25 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:43:25 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:25] "GET /api/device/hydra_13/control-status HTTP/1.1" 200 -
+2025-12-09 09:43:25 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:25] "GET /api/device/hydra_13/control-status HTTP/1.1" 200 -
+2025-12-09 09:43:36 [INFO] app.api: Executing pwmctrl on hydra_13 with params: {'fan_id': '1', 'duty': '100'}
+2025-12-09 09:43:36 [INFO] app.api: Executing pwmctrl on hydra_13 with params: {'fan_id': '1', 'duty': '100'}
+2025-12-09 09:43:36 [DEBUG] serialcables_hydra.controller: Sent: pwmctrl 1 100
+2025-12-09 09:43:36 [DEBUG] serialcables_hydra.controller: Sent: pwmctrl 1 100
+2025-12-09 09:43:36 [DEBUG] serialcables_hydra.controller: Received: pwmctrl 1 100
+
+Set duty 100 Success.
+
+2025-12-09 09:43:36 [DEBUG] serialcables_hydra.controller: Received: pwmctrl 1 100
+
+Set duty 100 Success.
+
+2025-12-09 09:43:36 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:36] "POST /api/device/hydra_13/control HTTP/1.1" 200 -
+2025-12-09 09:43:36 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:36] "POST /api/device/hydra_13/control HTTP/1.1" 200 -
+2025-12-09 09:43:36 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:43:36 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:43:36 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:43:36 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:43:36 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:36] "GET /api/device/hydra_13/control-status HTTP/1.1" 200 -
+2025-12-09 09:43:36 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:36] "GET /api/device/hydra_13/control-status HTTP/1.1" 200 -
+2025-12-09 09:43:40 [INFO] app.api: Executing pwmctrl on hydra_13 with params: {'fan_id': '2', 'duty': '100'}
+2025-12-09 09:43:40 [INFO] app.api: Executing pwmctrl on hydra_13 with params: {'fan_id': '2', 'duty': '100'}
+2025-12-09 09:43:40 [DEBUG] serialcables_hydra.controller: Sent: pwmctrl 2 100
+2025-12-09 09:43:40 [DEBUG] serialcables_hydra.controller: Sent: pwmctrl 2 100
+2025-12-09 09:43:40 [DEBUG] serialcables_hydra.controller: Received: pwmctrl 2 100
+
+Set duty 100 Success.
+
+2025-12-09 09:43:40 [DEBUG] serialcables_hydra.controller: Received: pwmctrl 2 100
+
+Set duty 100 Success.
+
+2025-12-09 09:43:40 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:40] "POST /api/device/hydra_13/control HTTP/1.1" 200 -
+2025-12-09 09:43:40 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:40] "POST /api/device/hydra_13/control HTTP/1.1" 200 -
+2025-12-09 09:43:40 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:43:40 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-09 09:43:40 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:43:40 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-09 09:43:40 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:40] "GET /api/device/hydra_13/control-status HTTP/1.1" 200 -
+2025-12-09 09:43:40 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:40] "GET /api/device/hydra_13/control-status HTTP/1.1" 200 -
+2025-12-09 09:43:53 [INFO] app.api: Disconnected from atlas3_12
+2025-12-09 09:43:53 [INFO] app.api: Disconnected from atlas3_12
+2025-12-09 09:43:53 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:53] "POST /api/disconnect/atlas3_12 HTTP/1.1" 200 -
+2025-12-09 09:43:53 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:53] "POST /api/disconnect/atlas3_12 HTTP/1.1" 200 -
+2025-12-09 09:43:54 [INFO] serialcables_hydra.controller: Disconnected from JBOF
+2025-12-09 09:43:54 [INFO] serialcables_hydra.controller: Disconnected from JBOF
+2025-12-09 09:43:54 [INFO] app.api: Disconnected from hydra_13
+2025-12-09 09:43:54 [INFO] app.api: Disconnected from hydra_13
+2025-12-09 09:43:54 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:54] "POST /api/disconnect/hydra_13 HTTP/1.1" 200 -
+2025-12-09 09:43:54 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:54] "POST /api/disconnect/hydra_13 HTTP/1.1" 200 -
+2025-12-09 09:43:55 [INFO] app.websocket: Client disconnected: 192.168.5.106
+2025-12-09 09:43:55 [INFO] app.websocket: Client disconnected: 192.168.5.106
+2025-12-09 09:43:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:55] "GET /socket.io/?EIO=4&transport=websocket&sid=ac0D0NVSy4HVNIm-AAAA HTTP/1.1" 200 -
+2025-12-09 09:43:55 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 09:43:55] "GET /socket.io/?EIO=4&transport=websocket&sid=ac0D0NVSy4HVNIm-AAAA HTTP/1.1" 200 -
