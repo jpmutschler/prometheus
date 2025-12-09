@@ -604,6 +604,8 @@ class DetectionCache:
         signatures = DeviceSignatures()
         settings = signatures.get_settings()
 
+        logger.debug(f'Starting fast detection on {com_port}')
+
         try:
             with serial.Serial(
                 port=com_port,
@@ -611,6 +613,7 @@ class DetectionCache:
                 timeout=timeout,
                 write_timeout=0.2  # Short write timeout - fail fast on unresponsive ports
             ) as ser:
+                logger.debug(f'{com_port}: Port opened successfully')
                 # Clear buffers
                 ser.reset_input_buffer()
                 ser.reset_output_buffer()
@@ -642,11 +645,14 @@ class DetectionCache:
                         time.sleep(0.03)
 
                 if not response_bytes:
+                    logger.debug(f'{com_port}: No response received')
                     return DetectionResult(
                         success=False,
                         com_port=com_port,
                         error='No response from device'
                     )
+
+                logger.debug(f'{com_port}: Received {len(response_bytes)} bytes')
 
                 # Decode response
                 try:
@@ -658,24 +664,35 @@ class DetectionCache:
                 response = get_detector()._clean_response(response)
 
                 if not response:
+                    logger.debug(f'{com_port}: Response was empty after cleaning')
                     return DetectionResult(
                         success=False,
                         com_port=com_port,
                         error='Empty response'
                     )
 
+                logger.debug(f'{com_port}: Cleaned response: {response[:100]}...')
+
                 # Match device
                 result = get_detector()._match_device(response, com_port)
                 result.raw_response = response
+
+                if result.success:
+                    logger.debug(f'{com_port}: Matched as {result.device_type}')
+                else:
+                    logger.debug(f'{com_port}: No device match found')
+
                 return result
 
         except serial.SerialException as e:
+            logger.debug(f'{com_port}: Serial error: {e}')
             return DetectionResult(
                 success=False,
                 com_port=com_port,
                 error=f'Serial error: {e}'
             )
         except Exception as e:
+            logger.debug(f'{com_port}: Exception: {e}')
             return DetectionResult(
                 success=False,
                 com_port=com_port,
