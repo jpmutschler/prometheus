@@ -1667,3 +1667,128 @@ select:focus, input[type="text"]:focus {
 .placeholder-message.error {
     color: var(--error);
 }
+
+/* =============================================================================
+   NVMe Drive Cards (HYDRA MCTP data)
+   ============================================================================= */
+
+.nvme-drives-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.nvme-drive-card {
+    background: var(--bg-tertiary);
+    border-radius: 6px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.nvme-drive-card.success {
+    border-left: 3px solid var(--success);
+}
+
+.nvme-drive-card.warning {
+    border-left: 3px solid var(--warning);
+    background: rgba(234, 179, 8, 0.05);
+}
+
+.nvme-drive-card.error {
+    border-left: 3px solid var(--error);
+    background: rgba(239, 68, 68, 0.05);
+}
+
+.nvme-drive-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nvme-slot {
+    font-weight: 600;
+    color: var(--accent-primary);
+    font-size: 0.85rem;
+}
+
+.nvme-serial {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.nvme-drive-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+}
+
+.nvme-stat {
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    background: var(--bg-secondary);
+    border-radius: 4px;
+}
+
+.nvme-stat.warning {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.nvme-stat-label {
+    font-size: 0.65rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.nvme-stat-value {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.nvme-stat.warning .nvme-stat-value {
+    color: var(--error);
+}
+
+.nvme-drive-error {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    padding: 4px;
+}
+
+/* NVMe info in ports widget */
+.port-detail.nvme-sn {
+    font-family: monospace;
+    font-size: 0.6rem;
+    color: var(--accent-primary);
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.port-detail.nvme-health {
+    font-size: 0.6rem;
+    padding: 1px 4px;
+    border-radius: 2px;
+    background: var(--bg-secondary);
+}
+
+.port-detail.nvme-health.success {
+    color: var(--success);
+}
+
+.port-detail.nvme-health.warning {
+    color: var(--warning);
+    background: rgba(234, 179, 8, 0.15);
+}
+
+.port-detail.nvme-health.error {
+    color: var(--error);
+    background: rgba(239, 68, 68, 0.15);
+}

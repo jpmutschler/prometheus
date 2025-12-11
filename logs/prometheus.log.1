@@ -1,80 +1,2335 @@
-2025-12-09 08:50:07 [INFO] prometheus: ============================================================
-2025-12-09 08:50:07 [INFO] prometheus: Prometheus server starting
-2025-12-09 08:50:07 [INFO] prometheus: ============================================================
-2025-12-09 08:50:07 [INFO] prometheus: Checking for Serial Cables library updates
-2025-12-09 08:50:07 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
-2025-12-09 08:50:07 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
-2025-12-09 08:50:07 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
-2025-12-09 08:50:07 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
-2025-12-09 08:50:07 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
-2025-12-09 08:50:07 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
-2025-12-09 08:50:07 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
-2025-12-09 08:50:07 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
-2025-12-09 08:50:07 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
-2025-12-09 08:50:07 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
-2025-12-09 08:50:08 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
-2025-12-09 08:50:08 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
-2025-12-09 08:50:08 [INFO] app.detection: Fast scan complete: 1/2 devices found
-2025-12-09 08:50:08 [INFO] app.detection: Fast scan complete: 1/2 devices found
-2025-12-09 08:50:09 [DEBUG] prometheus: serialcables-atlas3 is up to date
-2025-12-09 08:50:11 [INFO] prometheus: Update available for serialcables-hydra, installing...
-2025-12-09 08:50:13 [INFO] prometheus: Successfully updated serialcables-hydra
-2025-12-09 08:50:13 [INFO] prometheus: Server accessible at http://localhost:5000 and http://192.168.5.106:5000
-2025-12-09 08:50:13 [WARNING] werkzeug: Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
-2025-12-09 08:50:13 [WARNING] werkzeug: Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
-2025-12-09 08:50:13 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-12-11 11:30:48 [INFO] prometheus: ============================================================
+2025-12-11 11:30:48 [INFO] prometheus: Prometheus server starting
+2025-12-11 11:30:48 [INFO] prometheus: ============================================================
+2025-12-11 11:30:48 [INFO] prometheus: Checking for Serial Cables library updates
+2025-12-11 11:30:48 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-11 11:30:48 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-11 11:30:48 [DEBUG] app.detection: Port COM13 matches hydra (VID=0000 PID=0002)
+2025-12-11 11:30:48 [DEBUG] app.detection: Port COM13 matches hydra (VID=0000 PID=0002)
+2025-12-11 11:30:48 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-11 11:30:48 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-11 11:30:48 [INFO] app.detection: Fast scanning 1 ports (filtered from 3 total)
+2025-12-11 11:30:48 [INFO] app.detection: Fast scanning 1 ports (filtered from 3 total)
+2025-12-11 11:30:48 [DEBUG] app.detection: Starting fast detection on COM13
+2025-12-11 11:30:48 [DEBUG] app.detection: Starting fast detection on COM13
+2025-12-11 11:30:48 [DEBUG] app.detection: COM13: Port opened successfully
+2025-12-11 11:30:48 [DEBUG] app.detection: COM13: Port opened successfully
+2025-12-11 11:30:49 [DEBUG] app.detection: COM13: Received 986 bytes
+2025-12-11 11:30:49 [DEBUG] app.detection: COM13: Received 986 bytes
+2025-12-11 11:30:49 [DEBUG] app.detection: COM13: Cleaned response: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables         ...
+2025-12-11 11:30:49 [DEBUG] app.detection: COM13: Cleaned response: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables         ...
+2025-12-11 11:30:49 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
+2025-12-11 11:30:49 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
+2025-12-11 11:30:49 [DEBUG] app.detection: COM13: Matched as hydra
+2025-12-11 11:30:49 [DEBUG] app.detection: COM13: Matched as hydra
+2025-12-11 11:30:49 [INFO] app.detection: Fast scan complete: 1/1 devices found
+2025-12-11 11:30:49 [INFO] app.detection: Fast scan complete: 1/1 devices found
+2025-12-11 11:30:50 [DEBUG] prometheus: serialcables-atlas3 is up to date
+2025-12-11 11:30:52 [DEBUG] prometheus: serialcables-hydra is up to date
+2025-12-11 11:30:52 [INFO] prometheus: Server accessible at http://localhost:5000 and http://192.168.5.106:5000
+2025-12-11 11:30:52 [WARNING] werkzeug: Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2025-12-11 11:30:52 [WARNING] werkzeug: Werkzeug appears to be used in a production deployment. Consider switching to a production web server instead.
+2025-12-11 11:30:52 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.5.106:5000
-2025-12-09 08:50:13 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-12-11 11:30:52 [INFO] werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.5.106:5000
-2025-12-09 08:50:13 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
-2025-12-09 08:50:13 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
-2025-12-09 08:50:16 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:16] "GET / HTTP/1.1" 200 -
-2025-12-09 08:50:16 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:16] "GET / HTTP/1.1" 200 -
-2025-12-09 08:50:16 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:16] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
-2025-12-09 08:50:16 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:16] "[36mGET /static/css/dashboard.css HTTP/1.1[0m" 304 -
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "[36mGET /static/js/devices/hydra.js HTTP/1.1[0m" 304 -
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "[36mGET /static/js/devices/hydra.js HTTP/1.1[0m" 304 -
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "[36mGET /static/js/devices/atlas3.js HTTP/1.1[0m" 304 -
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "[36mGET /static/js/devices/atlas3.js HTTP/1.1[0m" 304 -
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "[36mGET /static/js/devices/device-registry.js HTTP/1.1[0m" 304 -
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "[36mGET /static/js/devices/device-registry.js HTTP/1.1[0m" 304 -
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "GET /socket.io/?EIO=4&transport=polling&t=Pi3pcbY HTTP/1.1" 200 -
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "GET /socket.io/?EIO=4&transport=polling&t=Pi3pcbY HTTP/1.1" 200 -
-2025-12-09 08:50:17 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
-2025-12-09 08:50:17 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
-2025-12-09 08:50:17 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
-2025-12-09 08:50:17 [DEBUG] app.detection: Port COM13 matches hydra (HWID: USB VID:PID=0000:0002 SER=0000000000001 LOCATION=1-5)
-2025-12-09 08:50:17 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
-2025-12-09 08:50:17 [DEBUG] app.detection: Port COM12 matches atlas3 (HWID: USB VID:PID=045B:5300 SER=5&1487BDB9&0&6 LOCATION=1-6:x.0)
-2025-12-09 08:50:17 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
-2025-12-09 08:50:17 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
-2025-12-09 08:50:17 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
-2025-12-09 08:50:17 [INFO] app.detection: Fast scanning 2 ports (filtered from 4 total)
-2025-12-09 08:50:17 [INFO] app.websocket: Client connected: 192.168.5.106
-2025-12-09 08:50:17 [INFO] app.websocket: Client connected: 192.168.5.106
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "POST /socket.io/?EIO=4&transport=polling&t=Pi3pccN&sid=ixo8JAH2uSkjiOITAAAA HTTP/1.1" 200 -
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "POST /socket.io/?EIO=4&transport=polling&t=Pi3pccN&sid=ixo8JAH2uSkjiOITAAAA HTTP/1.1" 200 -
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "GET /socket.io/?EIO=4&transport=polling&t=Pi3pccP&sid=ixo8JAH2uSkjiOITAAAA HTTP/1.1" 200 -
-2025-12-09 08:50:17 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:17] "GET /socket.io/?EIO=4&transport=polling&t=Pi3pccP&sid=ixo8JAH2uSkjiOITAAAA HTTP/1.1" 200 -
-2025-12-09 08:50:17 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
-2025-12-09 08:50:17 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
-2025-12-09 08:50:18 [INFO] app.detection: Detected atlas3 on COM12: PCI6-AD-x16HI-BG6-144
-2025-12-09 08:50:18 [INFO] app.detection: Detected atlas3 on COM12: PCI6-AD-x16HI-BG6-144
-2025-12-09 08:50:18 [INFO] app.detection: Fast scan complete: 2/2 devices found
-2025-12-09 08:50:18 [INFO] app.detection: Fast scan complete: 2/2 devices found
-2025-12-09 08:50:18 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:18] "POST /api/detect-all HTTP/1.1" 200 -
-2025-12-09 08:50:18 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:18] "POST /api/detect-all HTTP/1.1" 200 -
-2025-12-09 08:50:19 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:19] "GET /socket.io/?EIO=4&transport=polling&t=Pi3pd6N&sid=ixo8JAH2uSkjiOITAAAA HTTP/1.1" 200 -
-2025-12-09 08:50:19 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:19] "GET /socket.io/?EIO=4&transport=polling&t=Pi3pd6N&sid=ixo8JAH2uSkjiOITAAAA HTTP/1.1" 200 -
-2025-12-09 08:50:22 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:22] "GET / HTTP/1.1" 200 -
-2025-12-09 08:50:22 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:50:22] "GET / HTTP/1.1" 200 -
-2025-12-09 08:51:42 [INFO] app.websocket: Client disconnected: 192.168.5.106
-2025-12-09 08:51:42 [INFO] app.websocket: Client disconnected: 192.168.5.106
-2025-12-09 08:51:42 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:51:42] "GET /socket.io/?EIO=4&transport=websocket&sid=ixo8JAH2uSkjiOITAAAA HTTP/1.1" 200 -
-2025-12-09 08:51:42 [INFO] werkzeug: 192.168.5.106 - - [09/Dec/2025 08:51:42] "GET /socket.io/?EIO=4&transport=websocket&sid=ixo8JAH2uSkjiOITAAAA HTTP/1.1" 200 -
+2025-12-11 11:30:52 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2025-12-11 11:30:52 [INFO] werkzeug: [33mPress CTRL+C to quit[0m
+2025-12-11 11:30:54 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:54] "GET / HTTP/1.1" 200 -
+2025-12-11 11:30:54 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:54] "GET / HTTP/1.1" 200 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "GET /static/css/dashboard.css HTTP/1.1" 200 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "GET /static/js/devices/hydra.js HTTP/1.1" 200 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "GET /static/js/devices/hydra.js HTTP/1.1" 200 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "[36mGET /static/js/devices/atlas3.js HTTP/1.1[0m" 304 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "[36mGET /static/js/devices/atlas3.js HTTP/1.1[0m" 304 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "[36mGET /static/js/devices/device-registry.js HTTP/1.1[0m" 304 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "[36mGET /static/js/devices/device-registry.js HTTP/1.1[0m" 304 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "GET /socket.io/?EIO=4&transport=polling&t=PiEhZ67 HTTP/1.1" 200 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "GET /socket.io/?EIO=4&transport=polling&t=PiEhZ67 HTTP/1.1" 200 -
+2025-12-11 11:30:55 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-11 11:30:55 [DEBUG] app.detection: Skipping COM4 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_LOCALMFG&0000\7&25E004E&0&000000000000_00000000)
+2025-12-11 11:30:55 [DEBUG] app.detection: Port COM13 matches hydra (VID=0000 PID=0002)
+2025-12-11 11:30:55 [DEBUG] app.detection: Port COM13 matches hydra (VID=0000 PID=0002)
+2025-12-11 11:30:55 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-11 11:30:55 [DEBUG] app.detection: Skipping COM3 - unknown USB ID (HWID: BTHENUM\{00001101-0000-1000-8000-00805F9B34FB}_VID&0001004C_PID&2009\7&25E004E&0&3035ADEB0211_C00000000)
+2025-12-11 11:30:55 [INFO] app.detection: Fast scanning 1 ports (filtered from 3 total)
+2025-12-11 11:30:55 [INFO] app.detection: Fast scanning 1 ports (filtered from 3 total)
+2025-12-11 11:30:55 [DEBUG] app.detection: Starting fast detection on COM13
+2025-12-11 11:30:55 [DEBUG] app.detection: Starting fast detection on COM13
+2025-12-11 11:30:55 [DEBUG] app.detection: COM13: Port opened successfully
+2025-12-11 11:30:55 [DEBUG] app.detection: COM13: Port opened successfully
+2025-12-11 11:30:55 [INFO] app.websocket: Client connected: 192.168.5.106
+2025-12-11 11:30:55 [INFO] app.websocket: Client connected: 192.168.5.106
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "POST /socket.io/?EIO=4&transport=polling&t=PiEhZ6z&sid=dQQbeMJGJvCloylDAAAA HTTP/1.1" 200 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "POST /socket.io/?EIO=4&transport=polling&t=PiEhZ6z&sid=dQQbeMJGJvCloylDAAAA HTTP/1.1" 200 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "GET /socket.io/?EIO=4&transport=polling&t=PiEhZ70&sid=dQQbeMJGJvCloylDAAAA HTTP/1.1" 200 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "GET /socket.io/?EIO=4&transport=polling&t=PiEhZ70&sid=dQQbeMJGJvCloylDAAAA HTTP/1.1" 200 -
+2025-12-11 11:30:55 [DEBUG] app.detection: COM13: Received 986 bytes
+2025-12-11 11:30:55 [DEBUG] app.detection: COM13: Received 986 bytes
+2025-12-11 11:30:55 [DEBUG] app.detection: COM13: Cleaned response: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables         ...
+2025-12-11 11:30:55 [DEBUG] app.detection: COM13: Cleaned response: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables         ...
+2025-12-11 11:30:55 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
+2025-12-11 11:30:55 [INFO] app.detection: Detected hydra on COM13: PCIe Gen6 8Bays JBOF
+2025-12-11 11:30:55 [DEBUG] app.detection: COM13: Matched as hydra
+2025-12-11 11:30:55 [DEBUG] app.detection: COM13: Matched as hydra
+2025-12-11 11:30:55 [INFO] app.detection: Fast scan complete: 1/1 devices found
+2025-12-11 11:30:55 [INFO] app.detection: Fast scan complete: 1/1 devices found
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-11 11:30:55 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:55] "POST /api/detect-all HTTP/1.1" 200 -
+2025-12-11 11:30:56 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:56] "GET /socket.io/?EIO=4&transport=polling&t=PiEhZNs&sid=dQQbeMJGJvCloylDAAAA HTTP/1.1" 200 -
+2025-12-11 11:30:56 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:56] "GET /socket.io/?EIO=4&transport=polling&t=PiEhZNs&sid=dQQbeMJGJvCloylDAAAA HTTP/1.1" 200 -
+2025-12-11 11:30:57 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:57] "GET / HTTP/1.1" 200 -
+2025-12-11 11:30:57 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:30:57] "GET / HTTP/1.1" 200 -
+2025-12-11 11:30:59 [INFO] serialcables_hydra.controller: Connected to JBOF on COM13
+2025-12-11 11:30:59 [INFO] serialcables_hydra.controller: Connected to JBOF on COM13
+2025-12-11 11:31:00 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-11 11:31:00 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-11 11:31:00 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-11 11:31:00 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-11 11:31:00 [INFO] app.api: Connected to hydra on COM13 as hydra_13
+2025-12-11 11:31:00 [INFO] app.api: Connected to hydra on COM13 as hydra_13
+2025-12-11 11:31:00 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:31:00] "POST /api/connect HTTP/1.1" 200 -
+2025-12-11 11:31:00 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:31:00] "POST /api/connect HTTP/1.1" 200 -
+2025-12-11 11:31:10 [DEBUG] app.api: Getting sysinfo for hydra_13
+2025-12-11 11:31:10 [DEBUG] app.api: Getting sysinfo for hydra_13
+2025-12-11 11:31:10 [DEBUG] serialcables_hydra.controller: Sent: sysinfo
+2025-12-11 11:31:10 [DEBUG] serialcables_hydra.controller: Sent: sysinfo
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: sysinfo
+
+====================================================================================
+ver
+====================================================================================
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+
+====================================================================================
+lsd
+====================================================================================
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8332  RPM
+
+  • Switch Fan2          : 8252  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.659 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.30 V
+  • Slot 1 Load Current   : 0.444 A
+  • Slot 1 Load Power     : 5.578 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.310 A
+  • Slot 2 Load Power     : 3.735 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+
+====================================================================================
+ssdpwr
+====================================================================================
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+
+====================================================================================
+dual
+====================================================================================
+
+Slot 1 dual : off
+Slot 2 dual : off
+Slot 3 dual : off
+Slot 4 dual : off
+Slot 5 dual : off
+Slot 6 dual : off
+Slot 7 dual : off
+Slot 8 dual : off
+
+====================================================================================
+pwrdis
+====================================================================================
+
+Slot 1 pwrdis level to low
+Slot 2 pwrdis level to low
+Slot 3 pwrdis level to low
+Slot 4 pwrdis level to low
+Slot 5 pwrdis level to low
+Slot 6 pwrdis level to low
+Slot 7 pwrdis level to low
+Slot 8 pwrdis level to low
+
+====================================================================================
+bist
+====================================================================================
+
+Channel   Device       Address    Status
+---------------------------------------------
+CH0      PCA9575-0     0x40       [32mOK[0m
+CH1      AT24C64       0xA0       [32mOK[0m
+CH1      PCA9575-1     0x50       [32mOK[0m
+CH1      PCA9575-2     0x50       [32mOK[0m
+CH1      PCA9575-3     0x50       [32mOK[0m
+CH1      PCA9575-4     0x50       [32mOK[0m
+CH1      PCA9575-5     0x50       [32mOK[0m
+CH1      PCA9575-6     0x50       [32mOK[0m
+CH1      PCA9575-7     0x50       [32mOK[0m
+CH1      PCA9575-8     0x50       [32mOK[0m
+CH1      INA219A-1     0x80       [32mOK[0m
+CH1      INA219A-2     0x80       [32mOK[0m
+CH1      INA219A-3     0x80       [32mOK[0m
+CH1      INA219A-4     0x80       [32mOK[0m
+CH1      INA219A-5     0x80       [32mOK[0m
+CH1      INA219A-6     0x80       [32mOK[0m
+CH1      INA219A-7     0x80       [32mOK[0m
+CH1      INA219A-8     0x80       [32mOK[0m
+
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: sysinfo
+
+====================================================================================
+ver
+====================================================================================
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+
+====================================================================================
+lsd
+====================================================================================
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8332  RPM
+
+  • Switch Fan2          : 8252  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.659 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.30 V
+  • Slot 1 Load Current   : 0.444 A
+  • Slot 1 Load Power     : 5.578 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.310 A
+  • Slot 2 Load Power     : 3.735 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+
+====================================================================================
+ssdpwr
+====================================================================================
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+
+====================================================================================
+dual
+====================================================================================
+
+Slot 1 dual : off
+Slot 2 dual : off
+Slot 3 dual : off
+Slot 4 dual : off
+Slot 5 dual : off
+Slot 6 dual : off
+Slot 7 dual : off
+Slot 8 dual : off
+
+====================================================================================
+pwrdis
+====================================================================================
+
+Slot 1 pwrdis level to low
+Slot 2 pwrdis level to low
+Slot 3 pwrdis level to low
+Slot 4 pwrdis level to low
+Slot 5 pwrdis level to low
+Slot 6 pwrdis level to low
+Slot 7 pwrdis level to low
+Slot 8 pwrdis level to low
+
+====================================================================================
+bist
+====================================================================================
+
+Channel   Device       Address    Status
+---------------------------------------------
+CH0      PCA9575-0     0x40       [32mOK[0m
+CH1      AT24C64       0xA0       [32mOK[0m
+CH1      PCA9575-1     0x50       [32mOK[0m
+CH1      PCA9575-2     0x50       [32mOK[0m
+CH1      PCA9575-3     0x50       [32mOK[0m
+CH1      PCA9575-4     0x50       [32mOK[0m
+CH1      PCA9575-5     0x50       [32mOK[0m
+CH1      PCA9575-6     0x50       [32mOK[0m
+CH1      PCA9575-7     0x50       [32mOK[0m
+CH1      PCA9575-8     0x50       [32mOK[0m
+CH1      INA219A-1     0x80       [32mOK[0m
+CH1      INA219A-2     0x80       [32mOK[0m
+CH1      INA219A-3     0x80       [32mOK[0m
+CH1      INA219A-4     0x80       [32mOK[0m
+CH1      INA219A-5     0x80       [32mOK[0m
+CH1      INA219A-6     0x80       [32mOK[0m
+CH1      INA219A-7     0x80       [32mOK[0m
+CH1      INA219A-8     0x80       [32mOK[0m
+
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: showslot
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: showslot
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: showslot
+
+Slot01: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot02: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot03: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot04: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot05: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot06: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot07: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot08: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: showslot
+
+Slot01: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot02: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot03: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot04: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot05: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot06: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot07: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot08: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8332  RPM
+
+  • Switch Fan2          : 8252  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.659 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.28 V
+  • Slot 1 Load Current   : 0.469 A
+  • Slot 1 Load Power     : 6.005 W
+
+  • Slot 2 Bus Voltage    : 12.32 V
+  • Slot 2 Load Current   : 0.310 A
+  • Slot 2 Load Power     : 3.823 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8332  RPM
+
+  • Switch Fan2          : 8252  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.659 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.28 V
+  • Slot 1 Load Current   : 0.469 A
+  • Slot 1 Load Power     : 6.005 W
+
+  • Slot 2 Bus Voltage    : 12.32 V
+  • Slot 2 Load Current   : 0.310 A
+  • Slot 2 Load Power     : 3.823 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8332  RPM
+
+  • Switch Fan2          : 8252  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.659 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.30 V
+  • Slot 1 Load Current   : 0.450 A
+  • Slot 1 Load Power     : 5.560 W
+
+  • Slot 2 Bus Voltage    : 12.31 V
+  • Slot 2 Load Current   : 0.308 A
+  • Slot 2 Load Power     : 3.750 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8332  RPM
+
+  • Switch Fan2          : 8252  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.659 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.30 V
+  • Slot 1 Load Current   : 0.450 A
+  • Slot 1 Load Power     : 5.560 W
+
+  • Slot 2 Bus Voltage    : 12.31 V
+  • Slot 2 Load Current   : 0.308 A
+  • Slot 2 Load Power     : 3.750 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: mctp 1 sn
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: mctp 1 sn
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: mctp 1 sn
+[2J[HStart sending command with 2 packets...
+Sending packet 1/2, size = 73 bytes.
+3a 0f 45 21 01 00 00 8b 84 10 00 00 06 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b2 
+Sending packet 2/2, size = 17 bytes.
+3a 0f 0d 21 01 00 00 5b 00 00 00 00 4a c3 2c fa ef 
+Command sent successfully.
+
+Receive packet 1: 20 f 11 3b 1 0 0 c3 84 90 0 0 4 0 6 0 10 32 ec e2 f1 
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: mctp 1 sn
+[2J[HStart sending command with 2 packets...
+Sending packet 1/2, size = 73 bytes.
+3a 0f 45 21 01 00 00 8b 84 10 00 00 06 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b2 
+Sending packet 2/2, size = 17 bytes.
+3a 0f 0d 21 01 00 00 5b 00 00 00 00 4a c3 2c fa ef 
+Command sent successfully.
+
+Receive packet 1: 20 f 11 3b 1 0 0 c3 84 90 0 0 4 0 6 0 10 32 ec e2 f1 
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: mctp 1 health
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: mctp 1 health
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: mctp 1 health
+[2J[HStart sending command with 1 packets...
+Sending packet 1/1, size = 29 bytes.
+3a 0f 19 21 01 00 00 eb 84 08 00 00 01 00 00 00 00 00 00 00 00 00 00 80 aa ef 81 b4 48 
+Command sent successfully.
+
+Receive packet 1: 20 f 19 3b 1 0 0 c3 84 88 0 0 0 0 0 0 38 ff 22 0 21 3 0 0 f7 37 6f 25 f3 
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: mctp 1 health
+[2J[HStart sending command with 1 packets...
+Sending packet 1/1, size = 29 bytes.
+3a 0f 19 21 01 00 00 eb 84 08 00 00 01 00 00 00 00 00 00 00 00 00 00 80 aa ef 81 b4 48 
+Command sent successfully.
+
+Receive packet 1: 20 f 19 3b 1 0 0 c3 84 88 0 0 0 0 0 0 38 ff 22 0 21 3 0 0 f7 37 6f 25 f3 
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: mctp 2 sn
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: mctp 2 sn
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: mctp 2 sn
+[2J[HStart sending command with 2 packets...
+Sending packet 1/2, size = 73 bytes.
+3a 0f 45 21 01 00 00 8b 84 10 00 00 06 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b2 
+Sending packet 2/2, size = 17 bytes.
+3a 0f 0d 21 01 00 00 5b 00 00 00 00 4a c3 2c fa ef 
+Command sent successfully.
+
+Receive packet 1: 20 f 31 3b 1 0 0 c3 84 90 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 35 45 50 30 41 30 30 51 30 32 59 33 20 20 20 20 20 20 20 20 69 36 34 a0 2b 
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: mctp 2 sn
+[2J[HStart sending command with 2 packets...
+Sending packet 1/2, size = 73 bytes.
+3a 0f 45 21 01 00 00 8b 84 10 00 00 06 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b2 
+Sending packet 2/2, size = 17 bytes.
+3a 0f 0d 21 01 00 00 5b 00 00 00 00 4a c3 2c fa ef 
+Command sent successfully.
+
+Receive packet 1: 20 f 31 3b 1 0 0 c3 84 90 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 35 45 50 30 41 30 30 51 30 32 59 33 20 20 20 20 20 20 20 20 69 36 34 a0 2b 
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: mctp 2 health
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Sent: mctp 2 health
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: mctp 2 health
+[2J[HStart sending command with 1 packets...
+Sending packet 1/1, size = 29 bytes.
+3a 0f 19 21 01 00 00 eb 84 08 00 00 01 00 00 00 00 00 00 00 00 00 00 80 aa ef 81 b4 48 
+Command sent successfully.
+
+Receive packet 1: 20 f 19 3b 1 0 0 c3 84 88 0 0 0 0 0 0 38 ff 25 0 0 0 0 0 1a b5 68 43 ee 
+Cmd>
+2025-12-11 11:31:11 [DEBUG] serialcables_hydra.controller: Received: mctp 2 health
+[2J[HStart sending command with 1 packets...
+Sending packet 1/1, size = 29 bytes.
+3a 0f 19 21 01 00 00 eb 84 08 00 00 01 00 00 00 00 00 00 00 00 00 00 80 aa ef 81 b4 48 
+Command sent successfully.
+
+Receive packet 1: 20 f 19 3b 1 0 0 c3 84 88 0 0 0 0 0 0 38 ff 25 0 0 0 0 0 1a b5 68 43 ee 
+Cmd>
+2025-12-11 11:31:11 [DEBUG] app.api: Successfully got sysinfo for hydra_13
+2025-12-11 11:31:11 [DEBUG] app.api: Successfully got sysinfo for hydra_13
+2025-12-11 11:31:11 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:31:11] "GET /api/device/hydra_13/sysinfo HTTP/1.1" 200 -
+2025-12-11 11:31:11 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:31:11] "GET /api/device/hydra_13/sysinfo HTTP/1.1" 200 -
+2025-12-11 11:31:19 [DEBUG] app.api: Getting sysinfo for hydra_13
+2025-12-11 11:31:19 [DEBUG] app.api: Getting sysinfo for hydra_13
+2025-12-11 11:31:19 [DEBUG] serialcables_hydra.controller: Sent: sysinfo
+2025-12-11 11:31:19 [DEBUG] serialcables_hydra.controller: Sent: sysinfo
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: sysinfo
+
+====================================================================================
+ver
+====================================================================================
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+
+====================================================================================
+lsd
+====================================================================================
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8333  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.625 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.28 V
+  • Slot 1 Load Current   : 0.457 A
+  • Slot 1 Load Power     : 5.676 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.338 A
+  • Slot 2 Load Power     : 4.168 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+
+====================================================================================
+ssdpwr
+====================================================================================
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+
+====================================================================================
+dual
+====================================================================================
+
+Slot 1 dual : off
+Slot 2 dual : off
+Slot 3 dual : off
+Slot 4 dual : off
+Slot 5 dual : off
+Slot 6 dual : off
+Slot 7 dual : off
+Slot 8 dual : off
+
+====================================================================================
+pwrdis
+====================================================================================
+
+Slot 1 pwrdis level to low
+Slot 2 pwrdis level to low
+Slot 3 pwrdis level to low
+Slot 4 pwrdis level to low
+Slot 5 pwrdis level to low
+Slot 6 pwrdis level to low
+Slot 7 pwrdis level to low
+Slot 8 pwrdis level to low
+
+====================================================================================
+bist
+====================================================================================
+
+Channel   Device       Address    Status
+---------------------------------------------
+CH0      PCA9575-0     0x40       [32mOK[0m
+CH1      AT24C64       0xA0       [32mOK[0m
+CH1      PCA9575-1     0x50       [32mOK[0m
+CH1      PCA9575-2     0x50       [32mOK[0m
+CH1      PCA9575-3     0x50       [32mOK[0m
+CH1      PCA9575-4     0x50       [32mOK[0m
+CH1      PCA9575-5     0x50       [32mOK[0m
+CH1      PCA9575-6     0x50       [32mOK[0m
+CH1      PCA9575-7     0x50       [32mOK[0m
+CH1      PCA9575-8     0x50       [32mOK[0m
+CH1      INA219A-1     0x80       [32mOK[0m
+CH1      INA219A-2     0x80       [32mOK[0m
+CH1      INA219A-3     0x80       [32mOK[0m
+CH1      INA219A-4     0x80       [32mOK[0m
+CH1      INA219A-5     0x80       [32mOK[0m
+CH1      INA219A-6     0x80       [32mOK[0m
+CH1      INA219A-7     0x80       [32mOK[0m
+CH1      INA219A-8     0x80       [32mOK[0m
+
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: sysinfo
+
+====================================================================================
+ver
+====================================================================================
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+
+====================================================================================
+lsd
+====================================================================================
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8333  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.625 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.28 V
+  • Slot 1 Load Current   : 0.457 A
+  • Slot 1 Load Power     : 5.676 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.338 A
+  • Slot 2 Load Power     : 4.168 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+
+====================================================================================
+ssdpwr
+====================================================================================
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+
+====================================================================================
+dual
+====================================================================================
+
+Slot 1 dual : off
+Slot 2 dual : off
+Slot 3 dual : off
+Slot 4 dual : off
+Slot 5 dual : off
+Slot 6 dual : off
+Slot 7 dual : off
+Slot 8 dual : off
+
+====================================================================================
+pwrdis
+====================================================================================
+
+Slot 1 pwrdis level to low
+Slot 2 pwrdis level to low
+Slot 3 pwrdis level to low
+Slot 4 pwrdis level to low
+Slot 5 pwrdis level to low
+Slot 6 pwrdis level to low
+Slot 7 pwrdis level to low
+Slot 8 pwrdis level to low
+
+====================================================================================
+bist
+====================================================================================
+
+Channel   Device       Address    Status
+---------------------------------------------
+CH0      PCA9575-0     0x40       [32mOK[0m
+CH1      AT24C64       0xA0       [32mOK[0m
+CH1      PCA9575-1     0x50       [32mOK[0m
+CH1      PCA9575-2     0x50       [32mOK[0m
+CH1      PCA9575-3     0x50       [32mOK[0m
+CH1      PCA9575-4     0x50       [32mOK[0m
+CH1      PCA9575-5     0x50       [32mOK[0m
+CH1      PCA9575-6     0x50       [32mOK[0m
+CH1      PCA9575-7     0x50       [32mOK[0m
+CH1      PCA9575-8     0x50       [32mOK[0m
+CH1      INA219A-1     0x80       [32mOK[0m
+CH1      INA219A-2     0x80       [32mOK[0m
+CH1      INA219A-3     0x80       [32mOK[0m
+CH1      INA219A-4     0x80       [32mOK[0m
+CH1      INA219A-5     0x80       [32mOK[0m
+CH1      INA219A-6     0x80       [32mOK[0m
+CH1      INA219A-7     0x80       [32mOK[0m
+CH1      INA219A-8     0x80       [32mOK[0m
+
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: showslot
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: showslot
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: showslot
+
+Slot01: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot02: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot03: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot04: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot05: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot06: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot07: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot08: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: showslot
+
+Slot01: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot02: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot03: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot04: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot05: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot06: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot07: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot08: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8333  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.625 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.26 V
+  • Slot 1 Load Current   : 0.457 A
+  • Slot 1 Load Power     : 5.593 W
+
+  • Slot 2 Bus Voltage    : 12.28 V
+  • Slot 2 Load Current   : 0.333 A
+  • Slot 2 Load Power     : 4.095 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8333  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.625 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.26 V
+  • Slot 1 Load Current   : 0.457 A
+  • Slot 1 Load Power     : 5.593 W
+
+  • Slot 2 Bus Voltage    : 12.28 V
+  • Slot 2 Load Current   : 0.333 A
+  • Slot 2 Load Power     : 4.095 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8333  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.625 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.28 V
+  • Slot 1 Load Current   : 0.447 A
+  • Slot 1 Load Power     : 5.499 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.338 A
+  • Slot 2 Load Power     : 4.165 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 20°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8333  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.625 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.28 V
+  • Slot 1 Load Current   : 0.447 A
+  • Slot 1 Load Power     : 5.499 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.338 A
+  • Slot 2 Load Power     : 4.165 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: mctp 1 sn
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: mctp 1 sn
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: mctp 1 sn
+[2J[HStart sending command with 2 packets...
+Sending packet 1/2, size = 73 bytes.
+3a 0f 45 21 01 00 00 8b 84 10 00 00 06 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b2 
+Sending packet 2/2, size = 17 bytes.
+3a 0f 0d 21 01 00 00 5b 00 00 00 00 4a c3 2c fa ef 
+Command sent successfully.
+
+Receive packet 1: 20 f 11 3b 1 0 0 c3 84 90 0 0 4 0 6 0 10 32 ec e2 f1 
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: mctp 1 sn
+[2J[HStart sending command with 2 packets...
+Sending packet 1/2, size = 73 bytes.
+3a 0f 45 21 01 00 00 8b 84 10 00 00 06 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b2 
+Sending packet 2/2, size = 17 bytes.
+3a 0f 0d 21 01 00 00 5b 00 00 00 00 4a c3 2c fa ef 
+Command sent successfully.
+
+Receive packet 1: 20 f 11 3b 1 0 0 c3 84 90 0 0 4 0 6 0 10 32 ec e2 f1 
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: mctp 1 health
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: mctp 1 health
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: mctp 1 health
+[2J[HStart sending command with 1 packets...
+Sending packet 1/1, size = 29 bytes.
+3a 0f 19 21 01 00 00 eb 84 08 00 00 01 00 00 00 00 00 00 00 00 00 00 80 aa ef 81 b4 48 
+Command sent successfully.
+
+Receive packet 1: 20 f 19 3b 1 0 0 c3 84 88 0 0 0 0 0 0 38 ff 22 0 0 0 0 0 b7 49 21 c5 1b 
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: mctp 1 health
+[2J[HStart sending command with 1 packets...
+Sending packet 1/1, size = 29 bytes.
+3a 0f 19 21 01 00 00 eb 84 08 00 00 01 00 00 00 00 00 00 00 00 00 00 80 aa ef 81 b4 48 
+Command sent successfully.
+
+Receive packet 1: 20 f 19 3b 1 0 0 c3 84 88 0 0 0 0 0 0 38 ff 22 0 0 0 0 0 b7 49 21 c5 1b 
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: mctp 2 sn
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: mctp 2 sn
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: mctp 2 sn
+[2J[HStart sending command with 2 packets...
+Sending packet 1/2, size = 73 bytes.
+3a 0f 45 21 01 00 00 8b 84 10 00 00 06 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b2 
+Sending packet 2/2, size = 17 bytes.
+3a 0f 0d 21 01 00 00 5b 00 00 00 00 4a c3 2c fa ef 
+Command sent successfully.
+
+Receive packet 1: 20 f 31 3b 1 0 0 c3 84 90 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 35 45 50 30 41 30 30 51 30 32 59 33 20 20 20 20 20 20 20 20 69 36 34 a0 2b 
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: mctp 2 sn
+[2J[HStart sending command with 2 packets...
+Sending packet 1/2, size = 73 bytes.
+3a 0f 45 21 01 00 00 8b 84 10 00 00 06 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b2 
+Sending packet 2/2, size = 17 bytes.
+3a 0f 0d 21 01 00 00 5b 00 00 00 00 4a c3 2c fa ef 
+Command sent successfully.
+
+Receive packet 1: 20 f 31 3b 1 0 0 c3 84 90 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 35 45 50 30 41 30 30 51 30 32 59 33 20 20 20 20 20 20 20 20 69 36 34 a0 2b 
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: mctp 2 health
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Sent: mctp 2 health
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: mctp 2 health
+[2J[HStart sending command with 1 packets...
+Sending packet 1/1, size = 29 bytes.
+3a 0f 19 21 01 00 00 eb 84 08 00 00 01 00 00 00 00 00 00 00 00 00 00 80 aa ef 81 b4 48 
+Command sent successfully.
+
+Receive packet 1: 20 f 19 3b 1 0 0 c3 84 88 0 0 0 0 0 0 38 ff 25 0 0 0 0 0 1a b5 68 43 ee 
+Cmd>
+2025-12-11 11:31:20 [DEBUG] serialcables_hydra.controller: Received: mctp 2 health
+[2J[HStart sending command with 1 packets...
+Sending packet 1/1, size = 29 bytes.
+3a 0f 19 21 01 00 00 eb 84 08 00 00 01 00 00 00 00 00 00 00 00 00 00 80 aa ef 81 b4 48 
+Command sent successfully.
+
+Receive packet 1: 20 f 19 3b 1 0 0 c3 84 88 0 0 0 0 0 0 38 ff 25 0 0 0 0 0 1a b5 68 43 ee 
+Cmd>
+2025-12-11 11:31:20 [DEBUG] app.api: Successfully got sysinfo for hydra_13
+2025-12-11 11:31:20 [DEBUG] app.api: Successfully got sysinfo for hydra_13
+2025-12-11 11:31:20 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:31:20] "GET /api/device/hydra_13/sysinfo HTTP/1.1" 200 -
+2025-12-11 11:31:20 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:31:20] "GET /api/device/hydra_13/sysinfo HTTP/1.1" 200 -
+2025-12-11 11:32:26 [DEBUG] app.api: Getting sysinfo for hydra_13
+2025-12-11 11:32:26 [DEBUG] app.api: Getting sysinfo for hydra_13
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Sent: sysinfo
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Sent: sysinfo
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Received: sysinfo
+
+====================================================================================
+ver
+====================================================================================
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+
+====================================================================================
+lsd
+====================================================================================
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 19°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8270  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.631 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.26 V
+  • Slot 1 Load Current   : 0.535 A
+  • Slot 1 Load Power     : 6.506 W
+
+  • Slot 2 Bus Voltage    : 12.32 V
+  • Slot 2 Load Current   : 0.337 A
+  • Slot 2 Load Power     : 4.199 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+
+====================================================================================
+ssdpwr
+====================================================================================
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+
+====================================================================================
+dual
+====================================================================================
+
+Slot 1 dual : off
+Slot 2 dual : off
+Slot 3 dual : off
+Slot 4 dual : off
+Slot 5 dual : off
+Slot 6 dual : off
+Slot 7 dual : off
+Slot 8 dual : off
+
+====================================================================================
+pwrdis
+====================================================================================
+
+Slot 1 pwrdis level to low
+Slot 2 pwrdis level to low
+Slot 3 pwrdis level to low
+Slot 4 pwrdis level to low
+Slot 5 pwrdis level to low
+Slot 6 pwrdis level to low
+Slot 7 pwrdis level to low
+Slot 8 pwrdis level to low
+
+====================================================================================
+bist
+====================================================================================
+
+Channel   Device       Address    Status
+---------------------------------------------
+CH0      PCA9575-0     0x40       [32mOK[0m
+CH1      AT24C64       0xA0       [32mOK[0m
+CH1      PCA9575-1     0x50       [32mOK[0m
+CH1      PCA9575-2     0x50       [32mOK[0m
+CH1      PCA9575-3     0x50       [32mOK[0m
+CH1      PCA9575-4     0x50       [32mOK[0m
+CH1      PCA9575-5     0x50       [32mOK[0m
+CH1      PCA9575-6     0x50       [32mOK[0m
+CH1      PCA9575-7     0x50       [32mOK[0m
+CH1      PCA9575-8     0x50       [32mOK[0m
+CH1      INA219A-1     0x80       [32mOK[0m
+CH1      INA219A-2     0x80       [32mOK[0m
+CH1      INA219A-3     0x80       [32mOK[0m
+CH1      INA219A-4     0x80       [32mOK[0m
+CH1      INA219A-5     0x80       [32mOK[0m
+CH1      INA219A-6     0x80       [32mOK[0m
+CH1      INA219A-7     0x80       [32mOK[0m
+CH1      INA219A-8     0x80       [32mOK[0m
+
+Cmd>
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Received: sysinfo
+
+====================================================================================
+ver
+====================================================================================
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+
+====================================================================================
+lsd
+====================================================================================
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 19°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8270  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.631 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.26 V
+  • Slot 1 Load Current   : 0.535 A
+  • Slot 1 Load Power     : 6.506 W
+
+  • Slot 2 Bus Voltage    : 12.32 V
+  • Slot 2 Load Current   : 0.337 A
+  • Slot 2 Load Power     : 4.199 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+
+====================================================================================
+ssdpwr
+====================================================================================
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+
+====================================================================================
+dual
+====================================================================================
+
+Slot 1 dual : off
+Slot 2 dual : off
+Slot 3 dual : off
+Slot 4 dual : off
+Slot 5 dual : off
+Slot 6 dual : off
+Slot 7 dual : off
+Slot 8 dual : off
+
+====================================================================================
+pwrdis
+====================================================================================
+
+Slot 1 pwrdis level to low
+Slot 2 pwrdis level to low
+Slot 3 pwrdis level to low
+Slot 4 pwrdis level to low
+Slot 5 pwrdis level to low
+Slot 6 pwrdis level to low
+Slot 7 pwrdis level to low
+Slot 8 pwrdis level to low
+
+====================================================================================
+bist
+====================================================================================
+
+Channel   Device       Address    Status
+---------------------------------------------
+CH0      PCA9575-0     0x40       [32mOK[0m
+CH1      AT24C64       0xA0       [32mOK[0m
+CH1      PCA9575-1     0x50       [32mOK[0m
+CH1      PCA9575-2     0x50       [32mOK[0m
+CH1      PCA9575-3     0x50       [32mOK[0m
+CH1      PCA9575-4     0x50       [32mOK[0m
+CH1      PCA9575-5     0x50       [32mOK[0m
+CH1      PCA9575-6     0x50       [32mOK[0m
+CH1      PCA9575-7     0x50       [32mOK[0m
+CH1      PCA9575-8     0x50       [32mOK[0m
+CH1      INA219A-1     0x80       [32mOK[0m
+CH1      INA219A-2     0x80       [32mOK[0m
+CH1      INA219A-3     0x80       [32mOK[0m
+CH1      INA219A-4     0x80       [32mOK[0m
+CH1      INA219A-5     0x80       [32mOK[0m
+CH1      INA219A-6     0x80       [32mOK[0m
+CH1      INA219A-7     0x80       [32mOK[0m
+CH1      INA219A-8     0x80       [32mOK[0m
+
+Cmd>
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Sent: ver
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Received: ver
+╔══════════════════════ Product Info ════════════════════╗
+║ Company    : Serial Cables                             ║
+║ Model      : PCIe Gen6 8Bays JBOF                      ║
+║ Serial No. : G6JBF2511010037                           ║
+╚════════════════════════════════════════════════════════╝
+╔═══════════════════════ App Info ═══════════════════════╗
+║ Version    : 0.0.6                                     ║
+║ Build Time : Dec  5 2025 17:42:16                      ║
+╚════════════════════════════════════════════════════════╝
+
+Cmd>
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Sent: showslot
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Sent: showslot
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Received: showslot
+
+Slot01: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot02: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot03: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot04: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot05: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot06: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot07: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot08: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Cmd>
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Received: showslot
+
+Slot01: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot02: PC: SC, INT: NONE, EDSFF: X4  , Present: Yes
+Slot03: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot04: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot05: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot06: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot07: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Slot08: PC: SC, INT: NONE, EDSFF: NONE, Present:  No
+Cmd>
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-11 11:32:26 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 19°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8270  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.631 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.30 V
+  • Slot 1 Load Current   : 0.462 A
+  • Slot 1 Load Power     : 6.179 W
+
+  • Slot 2 Bus Voltage    : 12.29 V
+  • Slot 2 Load Current   : 0.343 A
+  • Slot 2 Load Power     : 4.336 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 19°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8270  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.631 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.30 V
+  • Slot 1 Load Current   : 0.462 A
+  • Slot 1 Load Power     : 6.179 W
+
+  • Slot 2 Bus Voltage    : 12.29 V
+  • Slot 2 Load Current   : 0.343 A
+  • Slot 2 Load Power     : 4.336 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Sent: lsd
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 19°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8270  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.631 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.27 V
+  • Slot 1 Load Current   : 0.450 A
+  • Slot 1 Load Power     : 5.538 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.348 A
+  • Slot 2 Load Power     : 4.324 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: lsd
+
+========================================
+           ★ Board Information ★
+========================================
+
+[ Thermal ]
+  • MCU   Temperature    : 22°C
+
+  • Slot1 Temperature    : 24°C
+
+  • Slot2 Temperature    : 24°C
+
+  • Slot3 Temperature    : 21°C
+
+  • Slot4 Temperature    : 20°C
+
+  • Slot5 Temperature    : 20°C
+
+  • Slot6 Temperature    : 19°C
+
+  • Slot7 Temperature    : 19°C
+
+  • Slot8 Temperature    : 19°C
+
+[ Fan Speed ]
+  • Switch Fan1          : 8270  RPM
+
+  • Switch Fan2          : 8370  RPM
+
+[ Voltage Sensors ]
+  • 12V Voltage          : 12.631 V
+
+[ Board Current ]
+  • Slot 1 Bus Voltage    : 12.27 V
+  • Slot 1 Load Current   : 0.450 A
+  • Slot 1 Load Power     : 5.538 W
+
+  • Slot 2 Bus Voltage    : 12.30 V
+  • Slot 2 Load Current   : 0.348 A
+  • Slot 2 Load Power     : 4.324 W
+
+  • Slot 3 Bus Voltage    : 0.00 V
+  • Slot 3 Load Current   : 0.000 A
+  • Slot 3 Load Power     : 0.000 W
+
+  • Slot 4 Bus Voltage    : 0.00 V
+  • Slot 4 Load Current   : 0.000 A
+  • Slot 4 Load Power     : 0.000 W
+
+  • Slot 5 Bus Voltage    : 0.00 V
+  • Slot 5 Load Current   : 0.000 A
+  • Slot 5 Load Power     : 0.000 W
+
+  • Slot 6 Bus Voltage    : 0.00 V
+  • Slot 6 Load Current   : 0.000 A
+  • Slot 6 Load Power     : 0.000 W
+
+  • Slot 7 Bus Voltage    : 0.00 V
+  • Slot 7 Load Current   : 0.000 A
+  • Slot 7 Load Power     : 0.000 W
+
+  • Slot 8 Bus Voltage    : 0.00 V
+  • Slot 8 Load Current   : 0.000 A
+  • Slot 8 Load Power     : 0.000 W
+
+Cmd>
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Sent: ssdpwr
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: ssdpwr
+
+Slot  1 power status: turn on.  
+Slot  2 power status: turn on.  
+Slot  3 power status: turn off 
+Slot  4 power status: turn off 
+Slot  5 power status: turn off 
+Slot  6 power status: turn off 
+Slot  7 power status: turn off 
+Slot  8 power status: turn off 
+Cmd>
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Sent: mctp 1 sn
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Sent: mctp 1 sn
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: mctp 1 sn
+[2J[HStart sending command with 2 packets...
+Sending packet 1/2, size = 73 bytes.
+3a 0f 45 21 01 00 00 8b 84 10 00 00 06 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b2 
+Sending packet 2/2, size = 17 bytes.
+3a 0f 0d 21 01 00 00 5b 00 00 00 00 4a c3 2c fa ef 
+Command sent successfully.
+
+Receive packet 1: 20 f 11 3b 1 0 0 c3 84 90 0 0 4 0 6 0 10 32 ec e2 f1 
+Cmd>
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: mctp 1 sn
+[2J[HStart sending command with 2 packets...
+Sending packet 1/2, size = 73 bytes.
+3a 0f 45 21 01 00 00 8b 84 10 00 00 06 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b2 
+Sending packet 2/2, size = 17 bytes.
+3a 0f 0d 21 01 00 00 5b 00 00 00 00 4a c3 2c fa ef 
+Command sent successfully.
+
+Receive packet 1: 20 f 11 3b 1 0 0 c3 84 90 0 0 4 0 6 0 10 32 ec e2 f1 
+Cmd>
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Sent: mctp 1 health
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Sent: mctp 1 health
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: mctp 1 health
+[2J[HStart sending command with 1 packets...
+Sending packet 1/1, size = 29 bytes.
+3a 0f 19 21 01 00 00 eb 84 08 00 00 01 00 00 00 00 00 00 00 00 00 00 80 aa ef 81 b4 48 
+Command sent successfully.
+
+Receive packet 1: 20 f 19 3b 1 0 0 c3 84 88 0 0 0 0 0 0 38 ff 22 0 0 0 0 0 b7 49 21 c5 1b 
+Cmd>
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: mctp 1 health
+[2J[HStart sending command with 1 packets...
+Sending packet 1/1, size = 29 bytes.
+3a 0f 19 21 01 00 00 eb 84 08 00 00 01 00 00 00 00 00 00 00 00 00 00 80 aa ef 81 b4 48 
+Command sent successfully.
+
+Receive packet 1: 20 f 19 3b 1 0 0 c3 84 88 0 0 0 0 0 0 38 ff 22 0 0 0 0 0 b7 49 21 c5 1b 
+Cmd>
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Sent: mctp 2 sn
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Sent: mctp 2 sn
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: mctp 2 sn
+[2J[HStart sending command with 2 packets...
+Sending packet 1/2, size = 73 bytes.
+3a 0f 45 21 01 00 00 8b 84 10 00 00 06 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b2 
+Sending packet 2/2, size = 17 bytes.
+3a 0f 0d 21 01 00 00 5b 00 00 00 00 4a c3 2c fa ef 
+Command sent successfully.
+
+Receive packet 1: 20 f 31 3b 1 0 0 c3 84 90 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 35 45 50 30 41 30 30 51 30 32 59 33 20 20 20 20 20 20 20 20 69 36 34 a0 2b 
+Cmd>
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: mctp 2 sn
+[2J[HStart sending command with 2 packets...
+Sending packet 1/2, size = 73 bytes.
+3a 0f 45 21 01 00 00 8b 84 10 00 00 06 03 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 00 00 14 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 b2 
+Sending packet 2/2, size = 17 bytes.
+3a 0f 0d 21 01 00 00 5b 00 00 00 00 4a c3 2c fa ef 
+Command sent successfully.
+
+Receive packet 1: 20 f 31 3b 1 0 0 c3 84 90 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 35 45 50 30 41 30 30 51 30 32 59 33 20 20 20 20 20 20 20 20 69 36 34 a0 2b 
+Cmd>
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Sent: mctp 2 health
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Sent: mctp 2 health
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: mctp 2 health
+[2J[HStart sending command with 1 packets...
+Sending packet 1/1, size = 29 bytes.
+3a 0f 19 21 01 00 00 eb 84 08 00 00 01 00 00 00 00 00 00 00 00 00 00 80 aa ef 81 b4 48 
+Command sent successfully.
+
+Receive packet 1: 20 f 19 3b 1 0 0 c3 84 88 0 0 0 0 0 0 38 ff 25 0 0 0 0 0 1a b5 68 43 ee 
+Cmd>
+2025-12-11 11:32:27 [DEBUG] serialcables_hydra.controller: Received: mctp 2 health
+[2J[HStart sending command with 1 packets...
+Sending packet 1/1, size = 29 bytes.
+3a 0f 19 21 01 00 00 eb 84 08 00 00 01 00 00 00 00 00 00 00 00 00 00 80 aa ef 81 b4 48 
+Command sent successfully.
+
+Receive packet 1: 20 f 19 3b 1 0 0 c3 84 88 0 0 0 0 0 0 38 ff 25 0 0 0 0 0 1a b5 68 43 ee 
+Cmd>
+2025-12-11 11:32:27 [DEBUG] app.api: Successfully got sysinfo for hydra_13
+2025-12-11 11:32:27 [DEBUG] app.api: Successfully got sysinfo for hydra_13
+2025-12-11 11:32:27 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:32:27] "GET /api/device/hydra_13/sysinfo HTTP/1.1" 200 -
+2025-12-11 11:32:27 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:32:27] "GET /api/device/hydra_13/sysinfo HTTP/1.1" 200 -
+2025-12-11 11:34:25 [INFO] app.websocket: Client disconnected: 192.168.5.106
+2025-12-11 11:34:25 [INFO] app.websocket: Client disconnected: 192.168.5.106
+2025-12-11 11:34:25 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:34:25] "GET /socket.io/?EIO=4&transport=websocket&sid=dQQbeMJGJvCloylDAAAA HTTP/1.1" 200 -
+2025-12-11 11:34:25 [INFO] werkzeug: 192.168.5.106 - - [11/Dec/2025 11:34:25] "GET /socket.io/?EIO=4&transport=websocket&sid=dQQbeMJGJvCloylDAAAA HTTP/1.1" 200 -
